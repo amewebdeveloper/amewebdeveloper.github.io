@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Your message has been sent.">
+    <meta name="author" content="Azariah Easey">
+    <!--no keywords are needed in this case-->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width">
+    <title>Easey Strings</title>
+    <style>
+            body {
+                font-family: Calibri, sans-serif;
+            }
+
+            p {
+                font-size: 20.0pt;
+            }
+
+            /*section {
+                padding: 0px 180px 0px 180px;
+            }*/
+
+            .hiddenTags {
+                font-size: 0.0000000000000000000000000000000000000000000001px;
+                display: none;
+            }
+
+            #textHolder {
+                position: center;
+                margin: auto;
+                max-width: 1234px;
+                /*border: solid;
+                border-left-color: black;
+                border-right-color: black;
+                border-top-color:none;
+                border-bottom-color: none;*/
+                /*commented code was used for testing*/
+                padding: 10px;
+            }
+
+            #navigationCenter {
+                text-align: center;
+                text-anchor: start;
+            }
+
+            #navigationCenter a:hover {
+                color: mediumpurple;
+            }
+
+            #logo {
+                max-width: 475px;
+                max-height: 93px;
+            }
+
+
+            .dropdownButton {
+                visibility: hidden; /*display: none*/
+            }
+
+            @media only screen and (max-width: 1300px) {
+                p {
+                    font-size: 15.0pt;
+                }
+            }
+
+            /*rest of CSS used for taking care of dropdown menu*/
+            @media only screen and (max-width: 861px) {
+
+                p {
+                    font-size: 15.0pt;
+                }
+
+                #navigationCenter {
+                    text-align: center;
+                    text-anchor: start;
+                }
+
+                .dropdownButton {
+                    background-color: white;
+                    color: black;
+                    padding: 16px;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 4.0em;
+                    visibility: visible;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: white;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                }
+
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                .dropdown-content a{
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+
+                .dropdown:hover .dropbtn {
+                    background-color: #3e8e41;
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                #logo {
+                    width: 200px;
+                    height: 39.1578947368421px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdownButton" id="controlHidingScheme1">
+                        ≡
+                    </button>
+                    <div class="dropdown-content">
+                        <div id="navigationCenter">
+                            <a href="index.html" style="font-size: 2.0em;">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="contact-us.html" style="font-size: 2.0em;">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="instrument.html" style="font-size: 2.0em;">Instruments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="pricing.html" style="font-size: 2.0em;">Pricing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="meet-the-teachers.html" style="font-size: 2.0em;">Meet the Teachers!</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <hr />
+            <div align="center">
+            <img id="logo" src="files/image3071.png" alt="Easey Strings" class="center">
+            </div>
+            <h1 class="hiddenTags">Easey Strings</h1> <!--helps create valid code to begin with-->
+            <!--<nav align="center">
+                <a href="instrument.html" style="font-size: 2.0em;">Instruments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="pricing.html" style="font-size: 2.0em;">Pricing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="meet-the-teachers.html" style="font-size: 2.0em;">Meet the Teachers!</a>
+            </nav>-->
+        </header>
+
+    <main>
+        <article>
+            <section>
+                <div id="textHolder">
+                    <p>Thank you for your input! Expect changes to be made to this site in the next 24 hours.</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <!--nothing in here-->
+    </footer>
+</body>
+</html>

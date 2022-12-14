@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Here, you can find the prices that can be given for certain kinds of lessons.">
+    <meta name="author" content="Azariah Easey">
+    <meta name="keywords" content="violin lessons in kansas, cello lessons in kansas, viola lessons in kansas, violin, cello, and viola lessons in kansas, strings in kansas, beginners string program in kansas, beginners string program in Bazine">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width">
+    <title>Easey Strings</title>
+    <link href="https://fonts.cdnfonts.com/css/lucida-calligraphy-new" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/lucida-calligraphy-new');
+        
+        body {
+            font-family: Calibri, sans-serif;
+        }
+
+        p {
+            font-size: 20.0pt;
+        }
+
+        /*section {
+                padding: 0px 180px 0px 180px;
+            }*/
+
+        .hiddenTags {
+            font-size: 0.0000000000000000000000000000000000000000000001px;
+            display: none;
+        }
+
+        #textHolder {
+            position: center;
+            margin: auto;
+            max-width: 1234px;
+            /*border: solid;
+                border-left-color: black;
+                border-right-color: black;
+                border-top-color:none;
+                border-bottom-color: none;*/
+            /*commented code was used for testing*/
+            padding: 10px;
+        }
+
+        #navigationCenter {
+            text-align: center;
+            text-anchor: start;
+        }
+
+            #navigationCenter a:hover {
+                color: mediumpurple;
+            }
+
+        #logo {
+            max-width: 475px;
+            max-height: 93px;
+        }
+
+
+        .dropdownButton {
+            visibility: hidden; /*display: none*/
+        }
+
+        #violinCelloImage {
+            max-height: 267px;
+            position: absolute;
+            top: 320px;
+            right: 410px; /*might be used if wanted*/
+        }
+
+        #violinBridgeImage {
+            max-width: 401px;
+            position: absolute;
+            top: 330px;
+            left: 420px;
+        }
+
+        .fancyLetters {
+            font-family: "Lucida Calligraphy New", "Lucida Calligraphy", sans-serif;
+            /*In other words, sans-serif is the last choice the site can make 
+                if the previous two fonts are not found.
+            */
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media only screen and (max-width: 1700px) {
+            p {
+                font-size: 20.0pt;
+            }
+
+            #violinCelloImage {
+                /*max-width: 0;*/
+                max-height: 267px;
+                position: absolute;
+                top: 320px;
+                right: 250px;
+            }
+
+            #violinBridgeImage {
+                /*max-width: 350px;*/
+                max-width: 401px;
+                position: absolute;
+                top: 330px;
+                left: 265.625px;
+            }
+        }
+
+        @media only screen and (max-width: 1600px) {
+            p {
+                font-size: 20.0pt;
+            }
+
+            #violinCelloImage {
+                /*max-width: 0;*/
+                max-height: 267px;
+                position: absolute;
+                top: 320px;
+                right: 160px;
+            }
+
+            #violinBridgeImage {
+                /*max-width: 350px;*/
+                max-width: 401px;
+                position: absolute;
+                top: 330px;
+                left: 170px;
+            }
+        }
+
+        @media only screen and (max-width: 1500px) {
+            p {
+                font-size: 20.0pt;
+            }
+
+            #violinCelloImage {
+                /*max-width: 0;*/
+                max-height: 267px;
+                position: absolute;
+                top: 320px;
+                right: 160px;
+            }
+
+            #violinBridgeImage {
+                /*max-width: 350px;*/
+                max-width: 401px;
+                position: absolute;
+                top: 330px;
+                left: 170px;
+            }
+        }
+
+        @media only screen and (max-width: 1400px) {
+            p {
+                font-size: 20.0pt;
+            }
+
+            #violinCelloImage {
+                /*max-width: 0;*/
+                max-height: 267px;
+                position: absolute;
+                top: 320px;
+                right: 160px;
+            }
+
+            #violinBridgeImage {
+                /*max-width: 350px;*/
+                max-width: 401px;
+                position: absolute;
+                top: 330px;
+                left: 170px;
+            }
+        }
+
+        @media only screen and (max-width: 1350px) {
+            p {
+                font-size: 20.0pt;
+            }
+
+            #violinCelloImage {
+                /*max-width: 0;*/
+                max-height: 267px;
+                position: absolute;
+                top: 320px;
+                right: 160px;
+            }
+
+            #violinBridgeImage {
+                /*max-width: 350px;*/
+                max-width: 401px;
+                position: absolute;
+                top: 330px;
+                left: 170px;
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+            p {
+                font-size: 15.0pt;
+            }
+
+            #violinCelloImage {
+                /*max-width: 280px;
+                    position: relative;
+                    top: 0;
+                    right: 0;*/
+                /*might be used at some point if wanted*/
+                /*top: 265px;*/
+                max-height: 187px;
+                position: absolute;
+                top: 270px;
+                right: 30px;
+            }
+
+            #violinBridgeImage {
+                max-width: 281px;
+                position: absolute;
+                top: 275px;
+                left: 30px;
+            }
+        }
+
+        @media only screen and (max-width: 1050px) {
+            #violinBridgeImage {
+                max-height: 187px;
+                position: absolute;
+                top: 300px;
+                right: 0;
+            }
+        }
+        /*rest of CSS used for taking care of dropdown menu*/
+        @media only screen and (max-width: 861px) {
+
+            p {
+                font-size: 15.0pt;
+            }
+
+            #violinCelloImage {
+                max-height: 267px;
+                position: relative;
+                top: 0;
+                right: 0;
+            }
+
+            #violinBridgeImage {
+                visibility: hidden;
+            }
+
+            #imageCenter {
+                text-align: center;
+            }
+
+            #navigationCenter {
+                text-align: center;
+                text-anchor: start;
+            }
+
+            .dropdownButton {
+                background-color: white;
+                color: black;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                font-size: 4.0em;
+                visibility: visible;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            #logo {
+                width: 200px;
+                height: 39.1578947368421px;
+            }
+
+            #violinCelloImage {
+                max-width: 300px;
+                position: relative;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 440px) {
+            #violinCelloImage {
+                max-width: 250px;
+                position: relative;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 310px) {
+            #violinCelloImage {
+                max-width: 200px;
+                position: relative;
+                top: 0;
+                right: 0;
+            }
+        } 
+    </style>
+</head>
+    <body>
+        <header>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdownButton" id="controlHidingScheme1">
+                        ≡
+                    </button>
+                    <div class="dropdown-content">
+                        <div id="navigationCenter">
+                            <a href="index.html" style="font-size: 2.0em;">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="contact-us.html" style="font-size: 2.0em;">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="instrument.html" style="font-size: 2.0em;">Instruments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="pricing.html" style="font-size: 2.0em;">Pricing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="meet-the-teachers.html" style="font-size: 2.0em;">Meet the Teachers!</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <hr />
+            <div align="center">
+                <img id="logo" src="files/image3071.png" alt="Easey Strings" class="center">
+            </div>
+            <h1 class="hiddenTags">Easey Strings</h1> <!--helps create valid code to begin with-->
+            <!--<nav align="center">
+        <a href="instrument.html" style="font-size: 2.0em;">Instruments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="pricing.html" style="font-size: 2.0em;">Pricing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="meet-the-teachers.html" style="font-size: 2.0em;">Meet the Teachers!</a>
+    </nav>-->
+            <div id="imageCenter">
+                <img src="images/violinAndCelloOnSide.JPG" id="violinCelloImage" alt="Instruments on their side." />
+                <img src="images/violinFromBridge.JPG" id="violinBridgeImage" alt="Violin from bridge angle."/>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                <section>
+                    <div id="textHolder">
+                        <p>
+                            <span>
+                                There is something unique about the beautiful sound of the string section in an orchestra. When it comes
+                                to music that really "pulls on your heart strings," no music score is complete without the presence of one of
+                                the four major string instruments:
+                            </span>
+                        </p>
+                        <p align="center" class="fancyLetters">violin</p>
+                        <p align="center" class="fancyLetters">viola</p>
+                        <p align="center" class="fancyLetters">cello</p>
+                        <p align="center" class="fancyLetters">bass</p>
+                        <p>
+                            The opportunity has arrived for you to foster a love for music in yourself or your child. You can also play a
+                            part of growing a community of young musicians in your own neighborhood by sponsoring a student for a season. If this
+                            is what you are wanting to accomplish, <!--might have to fix "If so"; that doens't make sense-->
+                            you can sign yourself or your child up for lessons <a href="signup.html" target="_blank">here.</a> If you have any questions, 
+                            please let us know on our <a href="contact-us.html">"Contact Us"</a> page, and we will give you more information.
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <div id="textHolder">
+                <p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
+            </div>
+            <!--<button onclick="dimensions();">ButtonPress</button>
+            <button onclick="dimensionsOfViolinCello();">dimension2</button>
+            <button onclick="alert($('violinBridgeImage').width + 'x' + $('violinBridgeImage').height);">dimension3</button>-->
+        </footer>
+
+        <script type="text/javascript">
+            function $(id) {
+                return document.getElementById(id);
+            }
+
+            function dimensionsOfViolinCello() { // this is just a function for testing purposes only
+                var image = $("violinCelloImage");
+                alert(image.width + "x" + image.height);
+            }
+
+            function dimensions() {
+                alert(window.innerWidth + "x" + window.innerHeight);
+            }
+        </script>
+    </body>
+</html>
