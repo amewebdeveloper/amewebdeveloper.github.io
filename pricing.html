@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -13,8 +13,12 @@
                 font-family: Calibri, sans-serif;
             }
 
-            p, li {
+            p, li, td {
                 font-size: 20.0pt;
+            }
+
+            td {
+                text-indent: hanging;
             }
 
             /*section {
@@ -59,16 +63,24 @@
             }
 
             @media only screen and (max-width: 1300px) {
-                p, li {
+                p, li, td {
                     font-size: 15.0pt;
+                }
+
+                td {
+                    text-indent: hanging;
                 }
             }
 
             /*rest of CSS used for taking care of dropdown menu*/
             @media only screen and (max-width: 861px) {
 
-                p, li {
+                p, li, td {
                     font-size: 15.0pt;
+                }
+
+                td {
+                    text-indent: hanging;
                 }
 
                 #navigationCenter {
@@ -174,18 +186,27 @@
                         <br />
                         <p>Lesson Rates:</p>
                         <p>Group lessons (3+ students must be present to be a group): $20/hour</p>
-                        <p>Individual lesson: $20/half-hour    $30/45-minutes      $40/hour</p>
+                        <!--<p>Individual lesson: $20/half-hour    $30/45-minutes      $40/hour</p>-->
+                        <p>Individual lesson:</p>
+                        <table>
+                            <thead></thead>
+                            <tbody>
+                                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$20/half-hour</td></tr>
+                                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$30/45-minutes</td></tr>
+                                <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$40/hour</td></tr>
+                            </tbody>
+                        </table>
                         <ul>
-                            <li>In-person or Zoom lessons available</li>
+                            <li>In-person or Zoom lessons are available</li>
                             <li>Beginning students will find a half-hour lesson to be sufficient. Longer lesson times are needed for more advanced students.</li>
                         </ul>
                         <br />
                         <p><b>Note:</b> Individual lesson spots will be limited and will be available only to:</p>
                         <ul>
-                            <li>students with prior experience on their string instrument,</li>
+                            <li>students with prior experience on their string instrument</li>
                             <li>students who have attended at least one season of group lessons and 
-                            would like to increase/refine their skills, or</li>
-                            <li>adults who are unable to attend a group session.</li>
+                            would like to increase/refine their skills</li>
+                            <li>adults who are unable to attend a group session</li>
                         </ul>
                     </div>
                 </section>
