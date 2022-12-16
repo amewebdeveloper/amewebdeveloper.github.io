@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -13,7 +13,7 @@
                 font-family: Calibri, sans-serif;
             }
 
-            p, li {
+            p, li,  #indentParagraph {
                 font-size: 20.0pt;
             }
 
@@ -68,12 +68,16 @@
                 text-align: center;
             }
 
+            #indentParagraph {
+                text-indent: 40px;
+            }
+
             ::-webkit-scrollbar {
                 display: none;
             }
 
             @media only screen and (max-width: 1638px) {
-                p, li {
+                p, li,  #indentParagraph {
                     font-size: 20.0pt;
                 }
                 #violinCelloImage {
@@ -85,7 +89,7 @@
             }
 
             @media only screen and (max-width: 1300px) {
-                p, li {
+                p, li,  #indentParagraph {
                     font-size: 15.0pt;
                 }
 
@@ -98,7 +102,7 @@
             }
 
             @media only screen and (max-width: 989px) {
-                p, li {
+                p, li,  #indentParagraph {
                     font-size: 15.0pt;
                 }
 
@@ -113,7 +117,7 @@
             /*rest of CSS used for taking care of dropdown menu*/
             @media only screen and (max-width: 861px) {
 
-                p, li {
+                p, li,  #indentParagraph {
                     font-size: 15.0pt;
                 }
 
@@ -250,8 +254,12 @@
                         own, if you so chose to go that route. There are several business, local and online, from which you can rent or buy an instrument.</p>
                         <br />
                         <p>Easey Strings Rental Fees:</p>
-                        <p>violin: $25/ month</p>
-                        <p>cello: $35/ month</p>
+                        <div id="indentParagraph">
+                            violin: $25/ month <br /></div>
+                        <div id="indentParagraph">
+                            cello: $35/ month<br />
+                        </div>
+                        <br />
                         <ul>
                             <li>These are gently used instruments that are good starter instruments for young students.</li>
                             <li>These are to function solely as temporary rentals until it can be determined by the student/parent if there is an interest 
