@@ -212,10 +212,29 @@
             </div>
         </footer>
 
+        <script src="sqljs/sql-wasm.js"></script>
+
         <script type="text/javascript">
             function $(id) {
                 return document.getElementById(id);
             }
+
+            config = {
+                locateFile: filename => `sqljs/contactResponses.sqlite`
+            }
+
+            initSqlJs().then(function (SQL) {
+                const db = new SQL.Database();
+                db.run('CREATE TABLE IF NOT EXISTS Responses (emailAddress TEXT, subjectMatter TEXT, question TEXT)');
+                db.run('INSERT INTO Responses VALUES (?,?, ?), (?,?, ?)', ["test", "test", "test", "test", "test", "test"]);
+
+                const stmt = db.prepare('SELECT * FROM Reponses');
+                stmt.getAsObject({ $start: 1, $end: 2 });
+                while (stmt.step()) {
+                    const row = stmt.getAsObject();
+                    console.log('Here is a row: ' + JSON.stringify(row));
+                }
+            })
 
             //var browserWidth = 0;
 
