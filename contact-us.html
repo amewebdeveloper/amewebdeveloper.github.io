@@ -183,7 +183,7 @@
                         email her at <i>maidy3e@gmail.com</i>.</p>
                         <p>If you need consulting concerning an instrument that you or your child is using, call Eric Easey at <i>813-205-0708</i>, or you can email 
                         him at <i>eric.easey@yahoo.com</i>.</p>
-                        <p>Or, you can just send a message to us right here on this page!</p>
+                        <p id="changingParagraph">Or, you can just send a message to us right here on this page!</p>
                         <!--<p>Or, you can just fill out this form <a href="https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=sf_link" target="_blank">here.</a></p>-->
                     </div>
                     <div id="centeredForm">
@@ -222,6 +222,12 @@
             var textarea = $("question");
 
             var originalNavHTML = $("navigationCenter").innerHTML;
+
+            if (navigator.userAgent.indexOf('Mac') != -1 ||
+                navigator.userAgent.indexOf('like Mac') != -1) {
+                $("changingParagraph").innerHTML = 'Or, you can just send a message to us <a href="https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=sf_link" target="_blank">here.</a>';
+            } // if this isn't the case, the HTML will stay the same
+            // This is a temporary solution. At some point, there will be a test with Safari.
 
             textarea.oninput = function () {
                 textarea.style.height = "";
