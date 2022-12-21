@@ -183,23 +183,22 @@
                         email her at <i>maidy3e@gmail.com</i>.</p>
                         <p>If you need consulting concerning an instrument that you or your child is using, call Eric Easey at <i>813-205-0708</i>, or you can email 
                         him at <i>eric.easey@yahoo.com</i>.</p>
-                        <!--<p>Or, you can just send a message to us right here on this page!</p>-->
-                        <p>Or, you can just fill out this form <a href="https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=sf_link" target="_blank">here.</a></p>
+                        <p>Or, you can just send a message to us right here on this page!</p>
+                        <!--<p>Or, you can just fill out this form <a href="https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=sf_link" target="_blank">here.</a></p>-->
                     </div>
                     <div id="centeredForm">
                         <!--https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=pp_url&entry.1758432991=emailAddress&entry.1823717675=subjectMatter&entry.308269570=questionBeingAsked-->
-                        <!--<form name="gform" id="gform" 
-                              class="emailForm"
-                              enctype="text/plain" 
-                              action="https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/formResponse?" 
-                              target="hidden_frame" 
+                        <form name="contactform" id="contactform" 
+                              class="contactform" 
+                              action="https://formsubmit.io/send/ec9b7e26-3118-4dcd-b153-3ddf0840c62a"
+                              method="POST"
                               onsubmit="submitted = true;">
-                            <input type="text" name="entry.1758432991" id="entry.1758432991" placeholder="Enter Email Address Here" required /><br />
-                            <input type="text" name="entry.1823717675" id="entry.1823717675" placeholder="Enter Subject Here" required /><br />
-                            <textarea name="entry.308269570" id="entry.308269570" placeholder="Enter Question Here" required></textarea><br />
+                            <input type="text" name="email" id="email" placeholder="Enter Email Address Here" required /><br />
+                            <input type="text" name="subject" id="subject" placeholder="Enter Subject Here" required /><br />
+                            <textarea name="question" id="question" placeholder="Enter Question Here" required></textarea><br />
                             <input type="submit" id="submit" value="Send" />
                         </form>
-                        <iframe id="hidden_frame" name="hidden_frame" style="display: none;" onload="if (submitted) { }"></iframe>-->
+                        <!--<iframe id="hidden_frame" name="hidden_frame" style="display: none;" onload="if (submitted) { }"></iframe>-->
                     </div>
                 </section>
             </article>
@@ -219,7 +218,7 @@
 
             //var browserWidth = 0;
 
-            var textarea = $("entry.308269570");
+            var textarea = $("question");
 
             var originalNavHTML = $("navigationCenter").innerHTML;
 
