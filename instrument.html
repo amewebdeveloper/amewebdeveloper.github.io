@@ -58,6 +58,16 @@
                 position: absolute;
                 top: 380px;
                 right: 240px;
+                display: inline /*initial*/;
+            }
+
+            #violinCelloImage2 {
+                max-width: 0.000000000001px;
+                display: none;
+            }
+
+            #violinCelloNecks {
+                max-width: 300px;
             }
 
             .dropdownButton {
@@ -76,6 +86,34 @@
                 display: none;
             }
 
+            #centeredImages {
+                text-align: center;
+            }
+
+            #centeredPrices {
+                text-align: center;
+            }
+
+            #violinAndCello {
+                max-width: 200px;
+            }
+
+            #centeredViolinImage {
+                /*text-align: center;*/
+                position: center;
+            }
+
+            #centeredObjects {
+                text-align: center;
+            }
+
+            #instrumentPrices {
+                position: center;
+                max-width: 310px;
+                padding-bottom: 90px;
+            }
+
+            /*Media queries need to be worked on.*/
             @media only screen and (max-width: 1638px) {
                 p, li,  #indentParagraph {
                     font-size: 20.0pt;
@@ -85,6 +123,14 @@
                     position: absolute;
                     top: 420px;
                     right: 300px;
+                    display: inline /*initial*/;
+                }
+                #violinCelloImage2 { /*keep it hidden for now*/
+                    max-width: 0.000000000001px;
+                    display: none;
+                }
+                #violinCelloNecks {
+                    max-width: 300px;
                 }
             }
 
@@ -98,6 +144,14 @@
                     position: absolute;
                     top: 332px;
                     right: 200px;
+                    display: inline /*initial*/;
+                }
+                #violinCelloImage2 {
+                    max-width: 0.000000000001px;
+                    display: none;
+                }
+                #violinCelloNecks {
+                    max-width: 250px;
                 }
             }
 
@@ -111,6 +165,14 @@
                     position: absolute;
                     top: 360px;
                     right: 200px;
+                    display: none;
+                }
+                #violinCelloImage2 {
+                    max-width: 140px;
+                    display: inline /*initial*/;
+                }
+                #violinCelloNecks {
+                    max-width: 250px;
                 }
             }
 
@@ -126,6 +188,16 @@
                     position: absolute;
                     top: 420px;
                     right: 150px;
+                    display: none;
+                }
+
+                #violinCelloImage2 {
+                    max-width: 20px;
+                    display: inline /*initial*/;
+                }
+
+                #violinCelloNecks {
+                    max-width: 200px;
                 }
 
                 #navigationCenter {
@@ -247,33 +319,64 @@
             <article>
                 <section>
                     <div id="textHolder">
-                        <div id="center"><img src="images\violinAndCelloStack.JPG" id="violinCelloImage" alt="Violin and cello together." /></div>
+                        <!--<div id="center"><img src="images\violinAndCelloStack.JPG" id="violinCelloImage" alt="Violin and cello together." /></div>-->
                         <p><b>Where can I get an instrument?</b></p>
-                        <p>This can be a tricky question to answer, but there are ways to answer it. We have a limited amount of instruments that are available for rental. 
-                        Also, you may know a friend who has an old violin/viola/cello that is not being used who would let you use it until you are able to purchase one of your 
-                        own, if you so chose to go that route. There are several business, local and online, from which you can rent or buy an instrument.</p>
+                        <p>
+                            This can be a tricky question to answer, but there are ways to answer it. We have a limited amount of instruments that are available for rental.
+                            Also, you may know a friend who has an old violin/viola/cello that is not being used who would let you use it until you are able to purchase one of your
+                            own, if you so chose to go that route. There are several business, local and online, from which you can rent or buy an instrument.
+                        </p>
                         <br />
-                        <p>Easey Strings Rental Fees:</p>
-                        <div id="indentParagraph">
-                            violin: $25/ month <br /></div>
-                        <div id="indentParagraph">
-                            cello: $35/ month<br />
+                        <div id="centeredObjects">
+                            <!--<div id="centeredPrices">
+                                <p>Easey Strings Rental Fees:</p>
+                                <div id="indentParagraph">
+                                    violin: $25/ month <br />
+                                </div>
+                                <div id="indentParagraph">
+                                    cello: $35/ month<br />
+                                </div>
+                            </div>-->
+                            <div id="centeredViolinImage">
+                                <img src="images/instrumentPrices.jpg" id="instrumentPrices" alt="Easey Strings Rental Fees:<br>violin: $25/ month <br>cello: $35/ month" />
+                                <img src="images/violinAndCelloStack.JPG" id="violinAndCello" alt="Violin and cello stacked on top of each other." />
+                            </div>
                         </div>
+                        <!--<div id="centeredPrices">
+                            <p>Easey Strings Rental Fees:</p>
+                            <div id="indentParagraph">
+                                violin: $25/ month <br />
+                            </div>
+                            <div id="indentParagraph">
+                                cello: $35/ month<br />
+                            </div>
+                        </div>
+                        <div id="centeredViolinImage">
+                            <img src="images/violinAndCelloStack.JPG" id="violinAndCello" alt="Violin and cello stacked on top of each other."/>
+                        </div>-->
+                        <!--Just trying to fix a bug.-->
                         <br />
                         <br />
                         <br />
                         <ul>
                             <li>These are gently used instruments that are good starter instruments for young students.</li>
-                            <li>These are to function solely as temporary rentals until it can be determined by the student/parent if there is an interest 
-                            in continuing with lessons. If student desires to continue on his/her journey through music, it is highly recommended for you to 
-                            purchase an instrument from a trusted online source or music store.</li>
+                            <li>
+                                These are to function solely as temporary rentals until it can be determined by the student/parent if there is an interest
+                                in continuing with lessons. If student desires to continue on his/her journey through music, it is highly recommended for you to
+                                purchase an instrument from a trusted online source or music store.
+                            </li>
                             <li>We will gladly offer our advice and help you out-source your instrument.</li>
                         </ul>
+                        <div id="centeredImages">
+                        <img src="images/violinAndCello.JPG" id="violinCelloNecks" alt="Violin and cello neck to neck." />
+                        </div>
                         <br />
-                        <p><b>Note: </b>We do not have an option of providing a rent-to-own contract right now. This rental provides the student with an instrument and covers re-stringing (as needed), 
-                        bow re-hair (as needed), and general maintenance, provided that the payments are current and the instrument is in good condition. It does not cover repairs that are needed because 
-                        of neglect or incorrect use of the instrument by the student. If complete loss of the instrument takes place, then the cost to replace the instrument with an instrument of equal caliber 
-                        will be covered by the renter.</p>
+                        <p>
+                            <b>Note: </b>We do not have an option of providing a rent-to-own contract right now. This rental provides the student with an instrument and covers re-stringing (as needed),
+                            bow re-hair (as needed), and general maintenance, provided that the payments are current and the instrument is in good condition. It does not cover repairs that are needed because
+                            of neglect or incorrect use of the instrument by the student. If complete loss of the instrument takes place, then the cost to replace the instrument with an instrument of equal caliber
+                            will be covered by the renter.
+                        </p>
                     </div>
                 </section>
             </article>
