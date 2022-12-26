@@ -207,8 +207,7 @@
 
         <footer>
             <div id="textHolder">
-                <!--<p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>-->
-                <p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/viewform?usp=sf_link" target="_blank">here.</a></p>
+                <p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
             </div>
         </footer>
 
@@ -223,12 +222,17 @@
 
             var originalNavHTML = $("navigationCenter").innerHTML;
 
-            if (navigator.userAgent.indexOf('Mac') != -1 ||
-                navigator.userAgent.indexOf('like Mac') != -1) {
-                $("changingParagraph").innerHTML = 'Or, you can just send a message to us <a href="https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=sf_link" target="_blank">here.</a>';
-                $("contactform").style.display = "none"; // hides the form -- or at least it should
-            } // if this isn't the case, the HTML will stay the same
+            function checkOS() {
+                if (navigator.userAgent.indexOf('Mac') != -1 ||
+                    navigator.userAgent.indexOf('like Mac') != -1) {
+                    $("changingParagraph").innerHTML = 'Or, you can just send a message to us <a href="https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=sf_link" target="_blank">here.</a>';
+                    $("contactform").style.display = "none"; // hides the form -- or at least it should
+                    $('textHolder').innerHTML = '<p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/viewform?usp=sf_link" target="_blank">here.</a></p>';
+                } // if this isn't the case, the HTML will stay the same
             // This is a temporary solution. At some point, there will be a test with Safari.
+            }
+
+            checkOS();
 
             textarea.oninput = function () {
                 textarea.style.height = "";
@@ -237,6 +241,7 @@
 
             window.onload = function () {
                 //browserWidth = window.innerWidth;
+                checkOS();
                 setInterval(updateAll, 0.01);
             }
 
