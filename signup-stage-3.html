@@ -467,7 +467,7 @@
                     </div>-->
                     <form id="signupform" name="signupform" class="signupform" action="https://formsubmit.io/send/534c2b9a-1707-4329-8a1b-949b7da86ea8" method="POST">
                         <input name="_redirect" type="hidden" id="name" value="https://easeystrings.com/signup-received.html" />
-                        <input type="text" name="name" id="name"/>
+                        <input type="text" name="parent_name" id="parent_name"/>
                         <input type="text" name="email" id="email"/>
                         <input type="text" name="phone_number" id="phone_number"/>
                         <input type="text" name="people_learning" id="people_learning"/>
@@ -556,6 +556,10 @@
             $("showField2").innerHTML = "Email: " + emailValue;
             $("showField3").innerHTML = "Phone Number: " + phoneNumberValue;
             $("showField4").innerHTML = checkLearningValue();
+            $("parent_name").value = firstNameValue + " " + lastNameValue;
+            $("email").value = emailValue;
+            $("phone_number").value = phoneNumberValue;
+            $("people_learning").value = checkLearningValue();
             showLearningData(listJSON);
             setInterval(updateAll, 0.01);
         }
