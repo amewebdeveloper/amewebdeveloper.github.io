@@ -20,10 +20,6 @@
             font-size: 20.0pt;
         }
 
-        #yourselfForm {
-            display: none;
-        }
-
         input {
             font-size: 15pt;
         }
@@ -437,7 +433,7 @@
                     </form><br /><br />
                     <!--<input type="submit" value="Submit" onclick="retrieveItems();" />-->
                     <div id="formsGenerator">
-                        <form id="yourselfForm">
+                        <!--<form id="yourselfForm">
                             <fieldset style="border: none;">
                                 <legend>What instrument are you wanting to learn?</legend>
                                 <div>
@@ -453,11 +449,11 @@
                                     <input type="radio" id="instrumentChoice4Parent" name="instrument" value="bass" />
                                     <label for="instrumentChoice4Parent">Bass</label><br />
                                 </div>
-                                <div>
+                                <div>-->
                                     <!--<button type="submit">Submit</button>-->
-                                </div>
+                                <!--</div>
                             </fieldset>
-                        </form>
+                        </form>-->
                     </div>
                 </div>
             </section>
@@ -532,7 +528,30 @@
             // array, and then sent to the form.
             fillFormFields(firstNameValue, middleNameValue, lastNameValue, emailValue, phoneNumberValue, peopleLearningValue);
             if (peopleLearningValue === "justYou" ||
-                peopleLearningValue === "yourChildAndYou") { $("yourselfForm").style.display = "initial"; }
+                peopleLearningValue === "yourChildAndYou") {
+                //$("yourselfForm").style.display = "initial";
+                $("formsGenerator").innerHTML += `<form id="yourselfForm">
+                            <fieldset style="border: none;">
+                                <legend>What instrument are you wanting to learn?</legend>
+                                <div>
+                                    <input type="radio" id="instrumentChoice1Parent" name="instrument" value="violin" />
+                                    <label for="instrumentChoice1Parent">Violin</label><br />
+
+                                    <input type="radio" id="instrumentChoice2Parent" name="instrument" value="cello" />
+                                    <label for="instrumentChoice2Parent">Cello</label><br />
+
+                                    <input type="radio" id="instrumentChoice3Parent" name="instrument" value="viola" />
+                                    <label for="instrumentChoice3Parent">Viola</label><br />
+
+                                    <input type="radio" id="instrumentChoice4Parent" name="instrument" value="bass" />
+                                    <label for="instrumentChoice4Parent">Bass</label><br />
+                                </div>
+                                <div>
+                                    <!--<button type="submit">Submit</button>-->
+                                </div>
+                            </fieldset>
+                        </form>`;
+            }
             generateFields(numberOfChildrenValue);
             setInterval(updateAll, 0.01);
         }
