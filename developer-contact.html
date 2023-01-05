@@ -1,42 +1,97 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Any issues with the website? Contact our developer here!">
-        <meta name="author" content="Azariah Easey">
-        <meta name="keywords" content="violin lessons in kansas, cello lessons in kansas, viola lessons in kansas, violin, cello, and viola lessons in kansas, strings in kansas, beginners string program in kansas, beginners string program in Bazine">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="viewport" content="width=device-width">
-        <title>Developer Contact</title>
-        <style>
-            body {
-                font-family: Calibri, sans-serif;
-            }
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Any issues with the website? Contact our developer here!">
+    <meta name="author" content="Azariah Easey">
+    <meta name="keywords" content="violin lessons in kansas, cello lessons in kansas, viola lessons in kansas, violin, cello, and viola lessons in kansas, strings in kansas, beginners string program in kansas, beginners string program in Bazine">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width">
+    <title>Developer Contact</title>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+        }
 
-            p {
-                font-size: 20.0pt;
-            }
+        p {
+            font-size: 20.0pt;
+        }
 
-            /*section {
+        /*section {
                 padding: 0px 180px 0px 180px;
             }*/
 
-            .hiddenTags {
-                font-size: 0.0000000000000000000000000000000000000000000001px;
-                display: none;
-            }
+        .hiddenTags {
+            font-size: 0.0000000000000000000000000000000000000000000001px;
+            display: none;
+        }
 
-            #textHolder {
-                position: center;
-                margin: auto;
-                max-width: 1234px;
-                /*border: solid;
+        #textHolder {
+            position: center;
+            margin: auto;
+            max-width: 1234px;
+            /*border: solid;
                 border-left-color: black;
                 border-right-color: black;
                 border-top-color:none;
                 border-bottom-color: none;*/
-                /*commented code was used for testing*/
-                padding: 10px;
+            /*commented code was used for testing*/
+            padding: 10px;
+        }
+
+        #navigationCenter {
+            text-align: center;
+            text-anchor: start;
+        }
+
+            #navigationCenter a:hover {
+                color: mediumpurple;
+            }
+
+        #logo {
+            max-width: 475px;
+            max-height: 93px;
+        }
+
+
+        .dropdownButton {
+            visibility: hidden; /*display: none*/
+        }
+
+        textarea {
+            font-family: Calibri, sans-serif;
+            font-size: 15pt;
+            width: 500px;
+            max-width: 600px;
+        }
+
+        #gform {
+            font-size: 20pt;
+        }
+
+        .paragraphTags {
+            max-width: 500px;
+        }
+
+        @media only screen and (max-width: 1300px) {
+            p {
+                font-size: 15.0pt;
+            }
+
+            #gform {
+                font-size: 15.0pt;
+            }
+        }
+
+        /*rest of CSS used for taking care of dropdown menu*/
+        @media only screen and (max-width: 861px) {
+
+            p {
+                font-size: 15.0pt;
+            }
+
+            #gform {
+                font-size: 15.0pt;
             }
 
             #navigationCenter {
@@ -44,135 +99,92 @@
                 text-anchor: start;
             }
 
-            #navigationCenter a:hover {
-                color: mediumpurple;
-            }
-
-            #logo {
-                max-width: 475px;
-                max-height: 93px;
-            }
-
-
             .dropdownButton {
-                visibility: hidden; /*display: none*/
+                background-color: white;
+                color: black;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                font-size: 4.0em;
+                visibility: visible;
             }
 
-            textarea {
-                font-family: Calibri, sans-serif;
-                font-size: 15pt;
-                width: 500px;
-                max-width: 600px;
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
             }
 
-            #gform {
-                font-size: 20pt;
+            .dropdown {
+                position: relative;
+                display: inline-block;
             }
 
-            .paragraphTags {
-                max-width: 500px;
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
             }
-
-            @media only screen and (max-width: 1300px) {
-                p {
-                    font-size: 15.0pt;
-                }
-
-                #gform {
-                    font-size: 15.0pt;
-                }
-            }
-
-            /*rest of CSS used for taking care of dropdown menu*/
-            @media only screen and (max-width: 861px) {
-
-                p {
-                    font-size: 15.0pt;
-                }
-
-                #gform {
-                    font-size: 15.0pt;
-                }
-
-                #navigationCenter {
-                    text-align: center;
-                    text-anchor: start;
-                }
-
-                .dropdownButton {
-                    background-color: white;
-                    color: black;
-                    padding: 16px;
-                    font-size: 16px;
-                    border: none;
-                    cursor: pointer;
-                    font-size: 4.0em;
-                    visibility: visible;
-                }
-
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    background-color: white;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                    z-index: 1;
-                }
-
-                .dropdown {
-                    position: relative;
-                    display: inline-block;
-                }
-
-                .dropdown-content a{
-                    color: black;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                }
 
                 .dropdown-content a:hover {
                     background-color: #f1f1f1;
                 }
 
-                .dropdown:hover .dropdown-content {
-                    display: block;
-                }
-
-                .dropdown:hover .dropbtn {
-                    background-color: #3e8e41;
-                }
+            .dropdown:hover .dropdown-content {
+                display: block;
             }
 
-            @media only screen and (max-width: 530px) {
-                .paragraphTags {
-                    max-width: 400px;
-                }
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+        }
+
+        @media only screen and (max-width: 530px) {
+            .paragraphTags {
+                max-width: 400px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            #logo {
+                width: 200px;
+                height: 39.1578947368421px;
             }
 
-            @media only screen and (max-width: 500px) {
-                #logo {
-                    width: 200px;
-                    height: 39.1578947368421px;
-                }
-                .paragraphTags {
-                    max-width: 400px;
-                }
+            .paragraphTags {
+                max-width: 400px;
             }
+        }
 
-            @media only screen and (max-width: 426px) {
-                .paragraphTags {
-                    max-width: 300px;
-                }
+        @media only screen and (max-width: 426px) {
+            .paragraphTags {
+                max-width: 300px;
             }
+        }
 
-            @media only screen and (max-width: 329px) {
-                .paragraphTags {
-                    max-width: 200px;
-                }
+        @media only screen and (max-width: 329px) {
+            .paragraphTags {
+                max-width: 200px;
             }
-        </style>
-    </head>
+        }
+    </style>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QLM5JP8D6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5QLM5JP8D6');
+    </script>
+</head>
     <body>
         <header>
             <nav>

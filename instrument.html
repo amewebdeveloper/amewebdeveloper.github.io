@@ -1,63 +1,162 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Here, you can find the pricing of certain instruments.">
-        <meta name="author" content="Azariah Easey">
-        <meta name="keywords" content="violin lessons in kansas, cello lessons in kansas, viola lessons in kansas, violin, cello, and viola lessons in kansas, strings in kansas, beginners string program in kansas, beginners string program in Bazine">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="viewport" content="width=device-width">
-        <title>Instruments</title>
-        <style>
-            body {
-                font-family: Calibri, sans-serif;
-            }
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Here, you can find the pricing of certain instruments.">
+    <meta name="author" content="Azariah Easey">
+    <meta name="keywords" content="violin lessons in kansas, cello lessons in kansas, viola lessons in kansas, violin, cello, and viola lessons in kansas, strings in kansas, beginners string program in kansas, beginners string program in Bazine">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width">
+    <title>Instruments</title>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+        }
 
-            p, li,  #indentParagraph {
-                font-size: 20.0pt;
-            }
+        p, li, #indentParagraph {
+            font-size: 20.0pt;
+        }
 
-            /*section {
+        /*section {
                 padding: 0px 180px 0px 180px;
             }*/
 
-            .hiddenTags {
-                font-size: 0.0000000000000000000000000000000000000000000001px;
-                display: none;
-            }
+        .hiddenTags {
+            font-size: 0.0000000000000000000000000000000000000000000001px;
+            display: none;
+        }
 
-            #textHolder {
-                position: center;
-                margin: auto;
-                max-width: 1234px;
-                /*border: solid;
+        #textHolder {
+            position: center;
+            margin: auto;
+            max-width: 1234px;
+            /*border: solid;
                 border-left-color: black;
                 border-right-color: black;
                 border-top-color:none;
                 border-bottom-color: none;*/
-                /*commented code was used for testing*/
-                padding: 10px;
-            }
+            /*commented code was used for testing*/
+            padding: 10px;
+        }
 
-            #navigationCenter {
-                text-align: center;
-                text-anchor: start;
-            }
+        #navigationCenter {
+            text-align: center;
+            text-anchor: start;
+        }
 
             #navigationCenter a:hover {
                 color: mediumpurple;
             }
 
-            #logo {
-                max-width: 475px;
-                max-height: 93px;
+        #logo {
+            max-width: 475px;
+            max-height: 93px;
+        }
+
+        #violinCelloImage {
+            max-width: 210px;
+            position: absolute;
+            top: 380px;
+            right: 240px;
+            display: inline /*initial*/;
+        }
+
+        #violinCelloImage2 {
+            max-width: 0.000000000001px;
+            display: none;
+        }
+
+        #violinCelloNecks {
+            max-width: 300px;
+        }
+
+        .dropdownButton {
+            visibility: hidden; /*display: none*/
+        }
+
+        #center {
+            text-align: center;
+        }
+
+        #indentParagraph {
+            text-indent: 40px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        #centeredImages {
+            text-align: center;
+        }
+
+        #centeredPrices {
+            text-align: center;
+        }
+
+        #violinAndCello {
+            max-width: 200px;
+        }
+
+        #centeredViolinImage {
+            /*text-align: center;*/
+            position: center;
+        }
+
+        #centeredObjects {
+            text-align: center;
+        }
+
+        #instrumentPrices {
+            position: center;
+            max-width: 310px;
+            padding-bottom: 90px;
+        }
+
+        /*Media queries need to be worked on.*/
+        @media only screen and (max-width: 1638px) {
+            p, li, #indentParagraph {
+                font-size: 20.0pt;
             }
 
             #violinCelloImage {
-                max-width: 210px;
+                max-width: 150px;
                 position: absolute;
-                top: 380px;
-                right: 240px;
+                top: 420px;
+                right: 300px;
+                display: inline /*initial*/;
+            }
+
+            #violinCelloImage2 { /*keep it hidden for now*/
+                max-width: 0.000000000001px;
+                display: none;
+            }
+
+            #violinCelloNecks {
+                max-width: 300px;
+            }
+
+            #violinAndCello {
+                max-width: 200px;
+            }
+
+            #instrumentPrices {
+                position: center;
+                max-width: 310px;
+                padding-bottom: 90px;
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+            p, li, #indentParagraph {
+                font-size: 15.0pt;
+            }
+
+            #violinCelloImage {
+                max-width: 160px;
+                position: absolute;
+                top: 332px;
+                right: 200px;
                 display: inline /*initial*/;
             }
 
@@ -70,41 +169,76 @@
                 max-width: 300px;
             }
 
-            .dropdownButton {
-                visibility: hidden; /*display: none*/
+            #violinAndCello {
+                max-width: 200px;
             }
 
-            #center {
-                text-align: center;
+            #instrumentPrices {
+                position: center;
+                max-width: 310px;
+                padding-bottom: 90px;
+            }
+        }
+
+        @media only screen and (max-width: 989px) {
+            p, li, #indentParagraph {
+                font-size: 15.0pt;
             }
 
-            #indentParagraph {
-                text-indent: 40px;
-            }
-
-            ::-webkit-scrollbar {
+            #violinCelloImage {
+                max-width: 140px;
+                position: absolute;
+                top: 360px;
+                right: 200px;
                 display: none;
             }
 
-            #centeredImages {
-                text-align: center;
+            #violinCelloImage2 {
+                max-width: 140px;
+                display: inline /*initial*/;
             }
 
-            #centeredPrices {
-                text-align: center;
+            #violinCelloNecks {
+                max-width: 300px;
             }
 
             #violinAndCello {
                 max-width: 200px;
             }
 
-            #centeredViolinImage {
-                /*text-align: center;*/
+            #instrumentPrices {
                 position: center;
+                max-width: 310px;
+                padding-bottom: 90px;
+            }
+        }
+
+        /*rest of CSS used for taking care of dropdown menu*/
+        @media only screen and (max-width: 861px) {
+
+            p, li, #indentParagraph {
+                font-size: 15.0pt;
             }
 
-            #centeredObjects {
-                text-align: center;
+            #violinCelloImage {
+                max-width: 140px;
+                position: absolute;
+                top: 420px;
+                right: 150px;
+                display: none;
+            }
+
+            #violinCelloImage2 {
+                max-width: 20px;
+                display: inline /*initial*/;
+            }
+
+            #violinCelloNecks {
+                max-width: 250px;
+            }
+
+            #violinAndCello {
+                max-width: 200px;
             }
 
             #instrumentPrices {
@@ -113,254 +247,144 @@
                 padding-bottom: 90px;
             }
 
-            /*Media queries need to be worked on.*/
-            @media only screen and (max-width: 1638px) {
-                p, li,  #indentParagraph {
-                    font-size: 20.0pt;
-                }
-                #violinCelloImage {
-                    max-width: 150px;
-                    position: absolute;
-                    top: 420px;
-                    right: 300px;
-                    display: inline /*initial*/;
-                }
-                #violinCelloImage2 { /*keep it hidden for now*/
-                    max-width: 0.000000000001px;
-                    display: none;
-                }
-                #violinCelloNecks {
-                    max-width: 300px;
-                }
-                #violinAndCello {
-                    max-width: 200px;
-                }
-                #instrumentPrices {
-                    position: center;
-                    max-width: 310px;
-                    padding-bottom: 90px;
-                }
+            #navigationCenter {
+                text-align: center;
+                text-anchor: start;
             }
 
-            @media only screen and (max-width: 1300px) {
-                p, li,  #indentParagraph {
-                    font-size: 15.0pt;
-                }
-
-                #violinCelloImage {
-                    max-width: 160px;
-                    position: absolute;
-                    top: 332px;
-                    right: 200px;
-                    display: inline /*initial*/;
-                }
-                #violinCelloImage2 {
-                    max-width: 0.000000000001px;
-                    display: none;
-                }
-                #violinCelloNecks {
-                    max-width: 300px;
-                }
-                #violinAndCello {
-                    max-width: 200px;
-                }
-                #instrumentPrices {
-                    position: center;
-                    max-width: 310px;
-                    padding-bottom: 90px;
-                }
+            .dropdownButton {
+                background-color: white;
+                color: black;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                font-size: 4.0em;
+                visibility: visible;
             }
 
-            @media only screen and (max-width: 989px) {
-                p, li,  #indentParagraph {
-                    font-size: 15.0pt;
-                }
-
-                #violinCelloImage {
-                    max-width: 140px;
-                    position: absolute;
-                    top: 360px;
-                    right: 200px;
-                    display: none;
-                }
-                #violinCelloImage2 {
-                    max-width: 140px;
-                    display: inline /*initial*/;
-                }
-                #violinCelloNecks {
-                    max-width: 300px;
-                }
-                #violinAndCello {
-                    max-width: 200px;
-                }
-                #instrumentPrices {
-                    position: center;
-                    max-width: 310px;
-                    padding-bottom: 90px;
-                }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
             }
 
-            /*rest of CSS used for taking care of dropdown menu*/
-            @media only screen and (max-width: 861px) {
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
 
-                p, li,  #indentParagraph {
-                    font-size: 15.0pt;
-                }
-
-                #violinCelloImage {
-                    max-width: 140px;
-                    position: absolute;
-                    top: 420px;
-                    right: 150px;
-                    display: none;
-                }
-
-                #violinCelloImage2 {
-                    max-width: 20px;
-                    display: inline /*initial*/;
-                }
-
-                #violinCelloNecks {
-                    max-width: 250px;
-                }
-
-                #violinAndCello {
-                    max-width: 200px;
-                }
-
-                #instrumentPrices {
-                    position: center;
-                    max-width: 310px;
-                    padding-bottom: 90px;
-                }
-
-                #navigationCenter {
-                    text-align: center;
-                    text-anchor: start;
-                }
-
-                .dropdownButton {
-                    background-color: white;
-                    color: black;
-                    padding: 16px;
-                    font-size: 16px;
-                    border: none;
-                    cursor: pointer;
-                    font-size: 4.0em;
-                    visibility: visible;
-                }
-
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    background-color: white;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                    z-index: 1;
-                }
-
-                .dropdown {
-                    position: relative;
-                    display: inline-block;
-                }
-
-                .dropdown-content a{
-                    color: black;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
 
                 .dropdown-content a:hover {
                     background-color: #f1f1f1;
                 }
 
-                .dropdown:hover .dropdown-content {
-                    display: block;
-                }
-
-                .dropdown:hover .dropbtn {
-                    background-color: #3e8e41;
-                }
+            .dropdown:hover .dropdown-content {
+                display: block;
             }
 
-            @media only screen and (max-width: 779px) {
-                #violinCelloImage {
-                    max-width: 140px;
-                    position: absolute;
-                    top: 430px;
-                    right: 150px;
-                }
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+        }
 
-                #violinAndCello {
-                    max-width: 200px;
-                }
-
-                #instrumentPrices {
-                    position: center;
-                    max-width: 310px;
-                    padding-bottom: 90px;
-                }
+        @media only screen and (max-width: 779px) {
+            #violinCelloImage {
+                max-width: 140px;
+                position: absolute;
+                top: 430px;
+                right: 150px;
             }
 
-            @media only screen and (max-width: 670px) {
-                #violinCelloImage {
-                    max-width: 130px;
-                    position: absolute;
-                    top: 430px;
-                    right: 50px;
-                }
-
-                #violinAndCello {
-                    max-width: 200px;
-                }
-
-                #instrumentPrices {
-                    position: center;
-                    max-width: 310px;
-                    padding-bottom: 90px;
-                }
+            #violinAndCello {
+                max-width: 200px;
             }
 
-            @media only screen and (max-width: 645px) {
-                #violinCelloImage {
-                    max-width: 120px;
-                    position: relative;
-                    top: 0;
-                    right: 0;
-                }
+            #instrumentPrices {
+                position: center;
+                max-width: 310px;
+                padding-bottom: 90px;
+            }
+        }
 
-                #violinAndCello {
-                    max-width: 200px;
-                }
-
-                #instrumentPrices {
-                    position: center;
-                    max-width: 310px;
-                    padding-bottom: 90px;
-                }
+        @media only screen and (max-width: 670px) {
+            #violinCelloImage {
+                max-width: 130px;
+                position: absolute;
+                top: 430px;
+                right: 50px;
             }
 
-            @media only screen and (max-width: 549px) {
-                #violinAndCello {
-                    max-width: 150px;
-                }
-
-                #instrumentPrices {
-                    position: center;
-                    max-width: 232.5px;
-                    padding-bottom: 90px;
-                }
+            #violinAndCello {
+                max-width: 200px;
             }
 
-            @media only screen and (max-width: 500px) {
-                #logo {
-                    width: 200px;
-                    height: 39.1578947368421px;
-                }
+            #instrumentPrices {
+                position: center;
+                max-width: 310px;
+                padding-bottom: 90px;
             }
-        </style>
-    </head>
+        }
+
+        @media only screen and (max-width: 645px) {
+            #violinCelloImage {
+                max-width: 120px;
+                position: relative;
+                top: 0;
+                right: 0;
+            }
+
+            #violinAndCello {
+                max-width: 200px;
+            }
+
+            #instrumentPrices {
+                position: center;
+                max-width: 310px;
+                padding-bottom: 90px;
+            }
+        }
+
+        @media only screen and (max-width: 549px) {
+            #violinAndCello {
+                max-width: 150px;
+            }
+
+            #instrumentPrices {
+                position: center;
+                max-width: 232.5px;
+                padding-bottom: 90px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            #logo {
+                width: 200px;
+                height: 39.1578947368421px;
+            }
+        }
+    </style>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QLM5JP8D6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5QLM5JP8D6');
+    </script>
+</head>
     <body>
         <header>
             <nav>

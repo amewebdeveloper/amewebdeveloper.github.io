@@ -1,46 +1,86 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Here, you can find the prices that can be given for certain kinds of lessons.">
-        <meta name="author" content="Azariah Easey">
-        <meta name="keywords" content="violin lessons in kansas, cello lessons in kansas, viola lessons in kansas, violin, cello, and viola lessons in kansas, strings in kansas, beginners string program in kansas, beginners string program in Bazine">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="viewport" content="width=device-width">
-        <title>Lessons</title>
-        <style>
-            body {
-                font-family: Calibri, sans-serif;
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Here, you can find the prices that can be given for certain kinds of lessons.">
+    <meta name="author" content="Azariah Easey">
+    <meta name="keywords" content="violin lessons in kansas, cello lessons in kansas, viola lessons in kansas, violin, cello, and viola lessons in kansas, strings in kansas, beginners string program in kansas, beginners string program in Bazine">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width">
+    <title>Lessons</title>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+        }
+
+        p, li, td {
+            font-size: 20.0pt;
+        }
+
+        td {
+            text-indent: hanging;
+        }
+
+        /*section {
+                padding: 0px 180px 0px 180px;
+            }*/
+
+        .hiddenTags {
+            font-size: 0.0000000000000000000000000000000000000000000001px;
+            display: none;
+        }
+
+        #textHolder {
+            position: center;
+            margin: auto;
+            max-width: 1234px;
+            /*border: solid;
+                border-left-color: black;
+                border-right-color: black;
+                border-top-color:none;
+                border-bottom-color: none;*/
+            /*commented code was used for testing*/
+            padding: 10px;
+        }
+
+        #navigationCenter {
+            text-align: center;
+            text-anchor: start;
+        }
+
+            #navigationCenter a:hover {
+                color: mediumpurple;
             }
 
+        #logo {
+            max-width: 475px;
+            max-height: 93px;
+        }
+
+
+        .dropdownButton {
+            visibility: hidden; /*display: none*/
+        }
+
+        @media only screen and (max-width: 1300px) {
             p, li, td {
-                font-size: 20.0pt;
+                font-size: 15.0pt;
             }
 
             td {
                 text-indent: hanging;
             }
+        }
 
-            /*section {
-                padding: 0px 180px 0px 180px;
-            }*/
+        /*rest of CSS used for taking care of dropdown menu*/
+        @media only screen and (max-width: 861px) {
 
-            .hiddenTags {
-                font-size: 0.0000000000000000000000000000000000000000000001px;
-                display: none;
+            p, li, td {
+                font-size: 15.0pt;
             }
 
-            #textHolder {
-                position: center;
-                margin: auto;
-                max-width: 1234px;
-                /*border: solid;
-                border-left-color: black;
-                border-right-color: black;
-                border-top-color:none;
-                border-bottom-color: none;*/
-                /*commented code was used for testing*/
-                padding: 10px;
+            td {
+                text-indent: hanging;
             }
 
             #navigationCenter {
@@ -48,99 +88,70 @@
                 text-anchor: start;
             }
 
-            #navigationCenter a:hover {
-                color: mediumpurple;
-            }
-
-            #logo {
-                max-width: 475px;
-                max-height: 93px;
-            }
-
-
             .dropdownButton {
-                visibility: hidden; /*display: none*/
+                background-color: white;
+                color: black;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                font-size: 4.0em;
+                visibility: visible;
             }
 
-            @media only screen and (max-width: 1300px) {
-                p, li, td {
-                    font-size: 15.0pt;
-                }
-
-                td {
-                    text-indent: hanging;
-                }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
             }
 
-            /*rest of CSS used for taking care of dropdown menu*/
-            @media only screen and (max-width: 861px) {
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
 
-                p, li, td {
-                    font-size: 15.0pt;
-                }
-
-                td {
-                    text-indent: hanging;
-                }
-
-                #navigationCenter {
-                    text-align: center;
-                    text-anchor: start;
-                }
-
-                .dropdownButton {
-                    background-color: white;
-                    color: black;
-                    padding: 16px;
-                    font-size: 16px;
-                    border: none;
-                    cursor: pointer;
-                    font-size: 4.0em;
-                    visibility: visible;
-                }
-
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    background-color: white;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                    z-index: 1;
-                }
-
-                .dropdown {
-                    position: relative;
-                    display: inline-block;
-                }
-
-                .dropdown-content a{
-                    color: black;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
 
                 .dropdown-content a:hover {
                     background-color: #f1f1f1;
                 }
 
-                .dropdown:hover .dropdown-content {
-                    display: block;
-                }
-
-                .dropdown:hover .dropbtn {
-                    background-color: #3e8e41;
-                }
+            .dropdown:hover .dropdown-content {
+                display: block;
             }
 
-            @media only screen and (max-width: 500px) {
-                #logo {
-                    width: 200px;
-                    height: 39.1578947368421px;
-                }
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
             }
-        </style>
-    </head>
+        }
+
+        @media only screen and (max-width: 500px) {
+            #logo {
+                width: 200px;
+                height: 39.1578947368421px;
+            }
+        }
+    </style>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QLM5JP8D6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5QLM5JP8D6');
+    </script>
+</head>
     <body>
         <header>
             <nav>
