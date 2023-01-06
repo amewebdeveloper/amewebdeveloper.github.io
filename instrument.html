@@ -24,7 +24,7 @@
             font-family: Calibri, sans-serif;
         }
 
-        p, li, #indentParagraph {
+        p, li, #indentParagraph, #singleSpace {
             font-size: 20.0pt;
         }
 
@@ -124,9 +124,13 @@
             padding-bottom: 90px;
         }
 
+        #singleSpace {
+            padding-left: 40px;
+        }
+
         /*Media queries need to be worked on.*/
         @media only screen and (max-width: 1638px) {
-            p, li, #indentParagraph {
+            p, li, #indentParagraph, #singleSpace {
                 font-size: 20.0pt;
             }
 
@@ -159,7 +163,7 @@
         }
 
         @media only screen and (max-width: 1300px) {
-            p, li, #indentParagraph {
+            p, li, #indentParagraph, #singleSpace {
                 font-size: 15.0pt;
             }
 
@@ -192,7 +196,7 @@
         }
 
         @media only screen and (max-width: 989px) {
-            p, li, #indentParagraph {
+            p, li, #indentParagraph, #singleSpace {
                 font-size: 15.0pt;
             }
 
@@ -227,7 +231,7 @@
         /*rest of CSS used for taking care of dropdown menu*/
         @media only screen and (max-width: 861px) {
 
-            p, li, #indentParagraph {
+            p, li, #indentParagraph, #singleSpace {
                 font-size: 15.0pt;
             }
 
@@ -427,12 +431,24 @@
                             own, if you so chose to go that route. There are several business, local and online, from which you can rent or buy an instrument.
                         </p>
                         <br />
-                        <div id="centeredObjects">
-                            <div id="centeredViolinImage">
-                                <img src="images/instrumentPrices.jpg" id="instrumentPrices" alt="Easey Strings Rental Fees:<br>violin: $25/ month <br>cello: $35/ month" />
-                                <img src="images/violinAndCelloStack.JPG" id="violinAndCello" alt="Violin and cello stacked on top of each other." />
-                            </div>
-                        </div>
+                        <table align="center" id="changingTable">
+                            <tbody>
+                                <tr>
+                                    <td align="left">
+                                        <p>Easey Strings Rental Fees:</p>
+                                        <div id="singleSpace" align="center">
+                                            violin: $25/ month<br />
+                                            cello: $35/ month
+                                        </div>
+                                        <!--<p style="text-indent: 40px;">violin: $25/ month</p>
+                                        <p style="text-indent: 40px;">cello: $35/ month</p>-->
+                                    </td>
+                                    <td style="padding-left: 20px;">
+                                        <img src="images/violinAndCelloStack.JPG" id="violinAndCello" alt="Violin and cello stacked on top of each other." />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <p><b>Note:</b> The bass instrument is to be provided by the student.</p>
                         <br />
                         <br />
@@ -468,6 +484,10 @@
         </footer>
 
         <script>
+
+            var defaultTableHTML = $("changingTable").innerHTML; // grab it before changing
+            var defaultCSS = $("singleSpace").style.paddingLeft; // grab that too
+
             function $(id) {
                 return document.getElementById(id);
             }
@@ -482,6 +502,37 @@
 
             window.onload = function () {
                 checkOS();
+                setInterval(updateAll, 0.01);
+            }
+
+            function updateAll() {
+                if (window.innerWidth < 423) {
+                    $("changingTable").innerHTML = `
+
+                            <tbody>
+                                <tr>
+                                    <td align="left">
+                                        <p>Easey Strings Rental Fees:</p>
+                                        <div id="singleSpace" align="center">
+                                            violin: $25/ month<br />
+                                            cello: $35/ month
+                                        </div>
+                                </tr>
+                                <tr>
+                                        <!--<p style="text-indent: 40px;">violin: $25/ month</p>
+                                        <p style="text-indent: 40px;">cello: $35/ month</p>-->
+                                    </td>
+                                    <td>
+                                        <img src="images/violinAndCelloStack.JPG" id="violinAndCello" alt="Violin and cello stacked on top of each other." />
+                                    </td>
+                                </tr>
+                            </tbody>`;
+
+                    $("singleSpace").style.paddingLeft = "0";
+                } else {
+                    $("changingTable").innerHTML = defaultTableHTML;
+                    $("singleSpace").style.paddingLeft = defaultCSS;
+                }
             }
         </script>
     </body>
