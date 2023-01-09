@@ -201,15 +201,16 @@
                     </div>
                     <div id="centeredForm">
                         <!--https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=pp_url&entry.1758432991=emailAddress&entry.1823717675=subjectMatter&entry.308269570=questionBeingAsked-->
-                        <form name="contactform" id="contactform" 
-                              class="contactform" 
+                        <form name="contactform" id="contactform"
+                              class="contactform"
                               action="https://formsubmit.io/send/6bab1529-9c5a-41da-94f1-135e949f1b90"
                               method="POST">
-                              <!--onsubmit="submitted = true;">-->
+                            <!--onsubmit="submitted = true;">-->
                             <input name="_redirect" type="hidden" id="messageSent" value="https://easeystrings.com/message-sent.html" /> <!--still trying to test on safari-->
                             <input type="text" name="email" id="email" placeholder="Enter Email Address Here" required /><br />
                             <input type="text" name="subject" id="subject" placeholder="Enter Subject Here" required /><br />
                             <textarea name="question" id="question" placeholder="Enter Question Here" required></textarea><br />
+                            <input name="_formsubmit_id" type="text" style="display:none">
                             <input type="submit" id="submit" value="Send" />
                         </form>
                         <!--<iframe id="hidden_frame" name="hidden_frame" style="display: none;" onload="if (submitted) { }"></iframe>-->
