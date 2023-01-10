@@ -295,6 +295,13 @@
                     $("subject").value.indexOf("Financialrobots") != -1 ||
                     $("subject").value.indexOf("FINANCIALROBOTS") != -1) {
 
+                    $("textHolder").innerHTML = "";
+                    $("controlHidingScheme1").innerHTML = "";
+                    $("controlHidingScheme1").style.display = "none";
+                    $("navigationCenter").innerHTML = ""; // clear everything
+                    $("logo").style.display = "none";
+                    $("centeredForm").innerHTML = "";
+
                     parent.location = "https://formsubmit.io/error/?error=Our%20system%20detected%20this%20submission%20as%20spam";
                 }
             }
