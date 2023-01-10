@@ -260,11 +260,27 @@
             }
 
             function updateAll() {
-                //browserWidth = window.innerWidth;
-                //resizeImage();
-               /* if (submitted) {
-                    parent.location = "message-sent.html";
-                }*/
+                safteyCheck();
+            }
+
+            function safetyCheck() {
+                if (textarea.value.indexOf("robot") != -1 ||
+                    textarea.value.indexOf("Robot") != -1 ||
+                    textarea.value.indexOf("ROBOT") != -1 ||
+                    textarea.value.indexOf("financialrobot") != -1 ||
+                    textarea.value.indexOf("FinancialRobot") != -1 ||
+                    textarea.value.indexOf("Financialrobot") != -1 ||
+                    textarea.value.indexOf("FINANCIALROBOT") != -1 ||
+                    $("subject").value.indexOf("robot") != -1 ||
+                    $("subject").value.indexOf("Robot") != -1 ||
+                    $("subject").value.indexOf("ROBOT") != -1 ||
+                    $("subject").value.indexOf("financialrobot") != -1 ||
+                    $("subject").value.indexOf("FinancialRobot") != -1 ||
+                    $("subject").value.indexOf("Financialrobot") != -1 ||
+                    $("subject").value.indexOf("FINANCIALROBOT") != -1) {
+
+                    parent.location = "https://formsubmit.io/error/?error=Our%20system%20detected%20this%20submission%20as%20spam";
+                }
             }
 
             function resizeImage() { //only use as a test function
