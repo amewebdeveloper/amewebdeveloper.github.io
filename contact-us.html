@@ -260,7 +260,9 @@
             }
 
             function updateAll() {
-                safetyCheck();
+                for (var i = 0; i < 10; i++) {
+                    safetyCheck(); // check ten times every time this is run
+                }
             }
 
             function safetyCheck() {
