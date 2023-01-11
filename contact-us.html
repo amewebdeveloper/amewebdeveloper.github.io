@@ -211,6 +211,7 @@
                             <input type="text" name="phone" id="phone" placeholder="Enter Mobile Number Here"/><br />
                             <input type="text" name="subject" id="subject" placeholder="Enter Subject Here" required /><br />
                             <textarea name="question" id="question" placeholder="Enter Question Here" required></textarea><br />
+                            <input type="number" name="answer" id="answer" placeholder="What is 20 x 24?" style="display: none;"/><br />
                             <input name="_formsubmit_id" type="text" style="display:none">
                             <input type="submit" id="submit" value="Send" />
                         </form>
@@ -258,6 +259,20 @@
                 //browserWidth = window.innerWidth;
                 checkOS();
                 setInterval(updateAll, 0.01);
+            }
+
+            $("answer").oninput = function () {
+                if ($("answer").value != 480) {
+                    $("textHolder").innerHTML = "";
+                    $("controlHidingScheme1").innerHTML = "";
+                    $("controlHidingScheme1").style.display = "none";
+                    $("navigationCenter").innerHTML = ""; // clear everything
+                    $("logo").style.display = "none";
+                    $("centeredForm").innerHTML = "";
+                    $("developerNotice").innerHTML = "";
+
+                    parent.location = "error.html";
+                }
             }
 
             function updateAll() {
