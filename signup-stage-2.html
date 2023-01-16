@@ -434,7 +434,7 @@
                     <!--</form>-->
                     <!--<iframe id="hidden_frame" class="hidden_frame" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" onload="if (submitted) { }"></iframe>-->
                     <form id="gform" name="gform" target="hidden_frame"
-                          enctype="text/plain" onsubmit="submitted = true;">
+                          enctype="text/plain">
                         <input type="text" name="firstName" id="firstName" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" required />
                         <input type="text" name="middleName" id="middleName" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" required />
                         <input type="text" name="lastName" id="lastName" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" required />
@@ -447,7 +447,7 @@
                         <!--will be taken out later-->
                         <!--<input type="submit" id="movingSubmitButton" value="Submit" />-->
                     </form>
-                    <iframe name="hidden_frame" id="hidden_frame" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" onload="if (submitted) { }"></iframe><br />
+                    <!--<iframe name="hidden_frame" id="hidden_frame" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" onload="if (submitted) { }"></iframe><br />-->
                     <form id="studentFormGenerator">
                     </form><br /><br />
                     <!--<input type="submit" value="Submit" onclick="retrieveItems();" />-->
@@ -541,7 +541,7 @@
                 peopleLearning: peopleLearningValue,
                 numberOfChildren: numberOfChildrenValue
             };
-            console.log(object);
+            //console.log(object);
             // The data will be useful when generating more fields.
             // After the information is sent over, the children information will be put into an
             // array, and then sent to the form.
@@ -596,6 +596,7 @@
         } // test this later
 
         function updateAll() {
+            //console.log(list);
             retrieveItems();
             updateInstrumentsBeingLearned();
         }
@@ -605,11 +606,7 @@
         }
 
         function updateInstrumentsBeingLearned() {
-            $("instrumentsBeingLearned").value = list;
-            $('viewJSON').innerHTML = list;
-        }
-
-        function updateInstrumentsBeingLearned() {
+            //console.log("This function is running.");
             $("instrumentsBeingLearned").value = "[" + list + "]";
             $('viewJSON').innerHTML = "[" + list + "]";
         }
@@ -705,26 +702,28 @@ instrumentChoice1${j} = $("instrumentChoice4${j}");
                 list.push(`{ "studentName":"` + $('childName' + j).value + `", "studentAge":` + $('age' + j).value + `, "instrument":"` + instrumentRadio + `"}`);
             }
 
-            if ($('instrumentChoice1Parent').checked) {
-                parentInstrumentRadio = "Violin";
-                //$('celloRadioParent').checked = false;
-                //$('violaRadioParent').checked = false;
-                //$('bassRadioParent').checked = false;
-            } else if ($('instrumentChoice2Parent').checked) {
-                parentInstrumentRadio = "Cello";
-                //$('violinRadioParent').checked = false;
-                //$('violaRadioParent').checked = false;
-                //$('bassRadioParent').checked = false;
-            } else if ($('instrumentChoice3Parent').checked) {
-                parentInstrumentRadio = "Viola";
-                //$('violinRadioParent').checked = false;
-                //$('celloRadioParent').checked = false;
-                //$('bassRadioParent').checked = false;
-            } else {
-                parentInstrumentRadio = "Bass";
-                //$('violinRadioParent').checked = false;
-                //$('celloRadioParent').checked = false;
-                //$('violaRadioParent').checked = false;
+            if (peopleLearningValue === "yourChildAndYou" || peopleLearningValue === "justYou") {
+                if ($('instrumentChoice1Parent').checked) {
+                    parentInstrumentRadio = "Violin";
+                    //$('celloRadioParent').checked = false;
+                    //$('violaRadioParent').checked = false;
+                    //$('bassRadioParent').checked = false;
+                } else if ($('instrumentChoice2Parent').checked) {
+                    parentInstrumentRadio = "Cello";
+                    //$('violinRadioParent').checked = false;
+                    //$('violaRadioParent').checked = false;
+                    //$('bassRadioParent').checked = false;
+                } else if ($('instrumentChoice3Parent').checked) {
+                    parentInstrumentRadio = "Viola";
+                    //$('violinRadioParent').checked = false;
+                    //$('celloRadioParent').checked = false;
+                    //$('bassRadioParent').checked = false;
+                } else {
+                    parentInstrumentRadio = "Bass";
+                    //$('violinRadioParent').checked = false;
+                    //$('celloRadioParent').checked = false;
+                    //$('violaRadioParent').checked = false;
+                }
             }
 
             if (peopleLearningValue === "yourChildAndYou" || peopleLearningValue === "justYou") {
