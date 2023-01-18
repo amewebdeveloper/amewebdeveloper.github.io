@@ -462,6 +462,9 @@
         youRadio.onclick = function () {
             childRadio.checked = false;
             bothRadio.checked = false;
+            numberOfChildren.style.display = "none";
+            numberOfChildren.value = null; // clear value if anything in it
+            hidden.style.display = "none";
         }
 
         childRadio.onclick = function () {
