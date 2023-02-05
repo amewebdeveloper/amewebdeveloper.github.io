@@ -402,83 +402,6 @@
             <section>
                 <div id="textHolder">
                     <p>Check to see if all of the information that you put is correct. If everything looks right, hit Submit. Otherwise, go back to the previous page and edit the answers to our prompts.</p><br /><br />
-                    <!--For this area, I found some code that could fix the bugs involved with the buttons:
-
-                        <form>
-                          <fieldset>
-                            <legend>Please select your preferred contact method:</legend>
-                            <div>
-                              <input type="radio" id="contactChoice1" name="contact" value="email" />
-                              <label for="contactChoice1">Email</label>
-
-                              <input type="radio" id="contactChoice2" name="contact" value="phone" />
-                              <label for="contactChoice2">Phone</label>
-
-                              <input type="radio" id="contactChoice3" name="contact" value="mail" />
-                              <label for="contactChoice3">Mail</label>
-                            </div>
-                            <div>
-                              <button type="submit">Submit</button>
-                            </div>
-                          </fieldset>
-                        </form>
-                    If I can use this code, I might be able to take out the bugs involving the buttons-->
-                    <!--<form id="signupForm" class="signupForm" target="hidden_frame" action="signup-stage-2.html?formResponse"
-                    enctype="text/plain" onsubmit="submitted = true;">-->
-                    <!--First Name <input type="text" name="firstName" id="firstName" style="width: 200px;" required /><div>&nbsp;&nbsp;</div>
-                    Middle Name <input type="text" name="middleName" id="middleName" style="width: 200px;" /><div>&nbsp;&nbsp;</div>
-                    Last Name <input type="text" name="lastName" id="lastName" style="width: 200px;" required /><br /><br />
-                    Email <input type="text" name="emailPart" id="emailPart" required /><div>&nbsp;&nbsp;</div>
-                    Phone Number (preferably mobile phone) <input type="text" name="phoneNumber" id="phoneNumber" placeholder="(e.g. 1800XXXXXXX)" /><br /><br />
-                    Who is learning how to play an instrument?<br />
-                    <input type="radio" name="youRadio" id="youRadio" />Me<br />
-                    <input type="radio" name="childRadio" id="childRadio" />My child<br />
-                    <input type="radio" name="bothRadio" id="bothRadio" />Both me and my child<br /><br />
-                    <div id="hidden">How many children are you signing up? <input type="number" id="numberOfChildren" /></div>
-                    <input type="submit" id="Submit" value="Next" onclick="nextStage();" />
-                    <!--</form>-->
-                    <!--<iframe id="hidden_frame" class="hidden_frame" style="display: none;" onload="if (submitted) { }"></iframe>-->
-                    <!--<form id="gform" name="gform" action="googleForm" target="hidden_frame"
-                          enctype="text/plain" onsubmit="submitted = true;">
-                        <input type="text" name="firstName" id="firstName" required />
-                        <input type="text" name="middleName" id="middleName" required />
-                        <input type="text" name="lastName" id="lastName" required />
-                        <input type="text" name="email" id="email" required />
-                        <input type="text" name="phoneNumber" id="phoneNumber" required />
-                        <input type="text" name="peopleLearning" id="peopleLearning" required />-->
-                        <!--<input type="text" name="instrumentsBeingLearned" id="instrumentsBeingLearned" required />-->
-                        <!--<textarea name="instrumentsBeingLearned" id="instrumentsBeingLearned" width="2000" height="2000" required></textarea>
-                        <code id="viewJSON"></code>--><!--for viewing the data-->
-                        <!--will be taken out later-->
-                        <!--<input type="submit" id="movingSubmitButton" value="Submit" />-->
-                    <!--</form>-->
-                    <!--<iframe name="hidden_frame" id="hidden_frame" style="display: none;" onload="if (submitted) { }"></iframe><br />
-                    <form id="studentFormGenerator">
-                    </form><br /><br />-->
-                    <!--<input type="submit" value="Submit" onclick="retrieveItems();" />-->
-                    <!--<div id="formsGenerator">
-                        <form id="yourselfForm">
-                            <fieldset style="border: none;">
-                                <legend>What instrument are you wanting to learn?</legend>
-                                <div>
-                                    <input type="radio" id="instrumentChoice1Parent" name="instrument" value="violin" />
-                                    <label for="instrumentChoice1Parent">Violin</label><br />
-
-                                    <input type="radio" id="instrumentChoice2Parent" name="instrument" value="cello" />
-                                    <label for="instrumentChoice2Parent">Cello</label><br />
-
-                                    <input type="radio" id="instrumentChoice3Parent" name="instrument" value="viola" />
-                                    <label for="instrumentChoice3Parent">Viola</label><br />
-
-                                    <input type="radio" id="instrumentChoice4Parent" name="instrument" value="bass" />
-                                    <label for="instrumentChoice4Parent">Bass</label><br />
-                                </div>
-                                <div>-->
-                                    <!--<button type="submit">Submit</button>-->
-                                <!--</div>
-                            </fieldset>
-                        </form>
-                    </div>-->
                     <form id="signupform" name="signupform" class="signupform" action="https://formsubmit.io/send/534c2b9a-1707-4329-8a1b-949b7da86ea8" method="POST">
                         <input name="_redirect" type="hidden" id="name" value="https://easeystrings.com/signup-received.html" />
                         <input type="text" name="parent_name" id="parent_name"/>
@@ -527,14 +450,6 @@
             alert(window.innerWidth + "x" + window.innerHeight);
         }
 
-        function checkOS() {
-            if (navigator.userAgent.indexOf("Mac") != -1 || navigator.userAgent.indexOf('like Mac') != -1) {
-                $("developerNotice").innerHTML = 'Experiencing bugs on this site? Contact our developer <a href="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/viewform?usp=sf_link" target="_blank">here.</a>';
-            }
-        }
-
-        checkOS();
-
         var url;
         var firstNameValue,
             middleNameValue,
@@ -548,7 +463,6 @@
         var generatedInformation = $("generatedInformation");
 
         window.onload = function () {
-            checkOS();
             url = new URLSearchParams(window.location.search);
             firstNameValue = url.get("firstName");
             middleNameValue = url.get("middleName");

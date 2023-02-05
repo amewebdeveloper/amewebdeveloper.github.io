@@ -408,12 +408,9 @@
             <div id="textHolder">
                 <p style="position: relative; bottom: 0; font-size: 12.0pt;" id="developerNotice">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
             </div>
-            <!--<button onclick="dimensions();">ButtonPress</button>
-            <button onclick="dimensionsOfViolinCello();">dimension2</button>
-            <button onclick="alert($('violinBridgeImage').width + 'x' + $('violinBridgeImage').height);">dimension3</button>-->
         </footer>
 
-        <script type="text/javascript">
+        <script type="text/javascript"> // This is just a ton of functions made for testing.
             function $(id) {
                 return document.getElementById(id);
             }
@@ -425,18 +422,6 @@
 
             function dimensions() {
                 alert(window.innerWidth + "x" + window.innerHeight);
-            }
-
-            function checkOS() {
-                if (navigator.userAgent.indexOf('Mac') != -1 || navigator.userAgent.indexOf('like Mac') != -1) {
-                    $("developerNotice").innerHTML = 'Experiencing bugs on this site? Contact our developer <a href="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/viewform?usp=sf_link" target="_blank">here.</a>';
-                }
-            }
-
-            checkOS();
-
-            window.onload = function () {
-                checkOS();
             }
         </script>
     </body>

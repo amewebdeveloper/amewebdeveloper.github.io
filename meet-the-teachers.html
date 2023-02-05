@@ -222,23 +222,5 @@
                 <!--<p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/viewform?usp=sf_link" target="_blank">here.</a></p>-->
             </div>
         </footer>
-
-        <script>
-            function $(id) {
-                return document.getElementById(id);
-            }
-
-            function checkOS() {
-                if (navigator.userAgent.indexOf('Mac') != -1 || navigator.userAgent.indexOf('like Mac') != -1) {
-                    $("developerNotice").innerHTML = 'Experiencing bugs on this site? Contact our developer <a href="https://docs.google.com/forms/d/e/1FAIpQLSetAnRBubPN7S0uskkUOxHKgnz3IpGZR-vE_X7PGSsnAjeDqQ/viewform?usp=sf_link" target="_blank">here.</a>';
-                }
-            }
-
-            checkOS();
-
-            window.onload = function () {
-                checkOS();
-            }
-        </script>
     </body>
 </html>
