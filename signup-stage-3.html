@@ -30,7 +30,7 @@
             font-family: Calibri, sans-serif;
         }
 
-        p, form {
+        p, form, .previousStage {
             font-size: 20.0pt;
         }
 
@@ -115,7 +115,7 @@
         }
 
         @media only screen and (max-width: 1700px) {
-            p, form {
+            p, form, .previousStage {
                 font-size: 20.0pt;
             }
 
@@ -137,7 +137,7 @@
         }
 
         @media only screen and (max-width: 1600px) {
-            p, form {
+            p, form, .previousStage {
                 font-size: 20.0pt;
             }
 
@@ -159,7 +159,7 @@
         }
 
         @media only screen and (max-width: 1500px) {
-            p, form {
+            p, form, .previousStage {
                 font-size: 20.0pt;
             }
 
@@ -181,7 +181,7 @@
         }
 
         @media only screen and (max-width: 1400px) {
-            p, form {
+            p, form, .previousStage {
                 font-size: 20.0pt;
             }
 
@@ -203,7 +203,7 @@
         }
 
         @media only screen and (max-width: 1350px) {
-            p, form {
+            p, form, .previousStage {
                 font-size: 20.0pt;
             }
 
@@ -225,7 +225,7 @@
         }
 
         @media only screen and (max-width: 1300px) {
-            p, form {
+            p, form, .previousStage {
                 font-size: 15.0pt;
             }
 
@@ -262,7 +262,7 @@
         /*rest of CSS used for taking care of dropdown menu*/
         @media only screen and (max-width: 861px) {
 
-            p, form {
+            p, form, .previousStage {
                 font-size: 15.0pt;
             }
 
@@ -404,10 +404,10 @@
                     <p>Check to see if all of the information that you put is correct. If everything looks right, hit Submit. Otherwise, go back to the previous page and edit the answers to our prompts.</p><br /><br />
                     <form id="signupform" name="signupform" class="signupform" action="https://formsubmit.io/send/534c2b9a-1707-4329-8a1b-949b7da86ea8" method="POST">
                         <input name="_redirect" type="hidden" id="name" value="https://easeystrings.com/signup-received.html" />
-                        <input type="text" name="parent_name" id="parent_name"/>
-                        <input type="text" name="email" id="email"/>
-                        <input type="text" name="phone_number" id="phone_number"/>
-                        <input type="text" name="people_learning" id="people_learning"/>
+                        <input type="text" name="parent_name" id="parent_name" />
+                        <input type="text" name="email" id="email" />
+                        <input type="text" name="phone_number" id="phone_number" />
+                        <input type="text" name="people_learning" id="people_learning" />
                         <textarea name="instruments_being_learned_by_each_person" id="instruments_being_learned_by_each_person"></textarea>
                         <p id="showField1"></p>
                         <p id="showField2"></p>
@@ -422,6 +422,7 @@
 
                         <input type="submit" value="Submit" id="submit" />
                     </form>
+                    <p><a href="javascript:window.history.back();" class="previousStage"><== Previous Stage</a></p>
                 </div>
             </section>
         </article>
