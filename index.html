@@ -64,6 +64,11 @@
             max-height: 93px;
         }
 
+        #sowNow {
+            /*width="600" height="337" */
+            width: 600px;
+            height: 337px;
+        }
 
         .dropdownButton {
             visibility: hidden; /*display: none*/
@@ -310,6 +315,13 @@
             }
         }
 
+        @media only screen and (max-width: 800px) {
+            #sowNow {
+                width: 400px;
+                height: 224.9211356466877px;
+            }
+        }
+
         @media only screen and (max-width: 500px) {
             #logo {
                 width: 200px;
@@ -324,12 +336,26 @@
             }
         }
 
+        @media only screen and (max-width: 400px) {
+            #sowNow {
+                width: 300px;
+                height: 168.6908517350158px;
+            }
+        }
+
         @media only screen and (max-width: 440px) {
             #violinCelloImage {
                 max-width: 250px;
                 position: relative;
                 top: 0;
                 right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 324px) {
+            #sowNow {
+                width: 200px;
+                height: 112.4605678233438px;
             }
         }
 
@@ -399,9 +425,9 @@
                             you can sign yourself or your child up for lessons <a href="signup.html" target="_blank">here.</a> If you have any questions, 
                             please let us know on our <a href="contact-us.html">"Contact Us"</a> page, and we will give you more information.
                         </p>
-                        <div style="text-align: center;">
-                            <iframe width="600" height="337" src="https://www.youtube.com/embed/VFs59lIgRds" title="Sow now Harvest Later HD 720" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
+                        <div style="text-align: center;" id="videoFrame">
+                            <iframe src="https://www.youtube.com/embed/VFs59lIgRds" id="sowNow" title="Sow now Harvest Later HD 720" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div> <!--width="600" height="337"-->
                     </div>
                 </section>
             </article>
@@ -425,6 +451,10 @@
 
             function dimensions() {
                 alert(window.innerWidth + "x" + window.innerHeight);
+            }
+
+            window.onload = function () {
+                setInterval(resizeVideo, 0.01);
             }
         </script>
     </body>
