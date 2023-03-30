@@ -43,7 +43,7 @@
             display: none;
         }
 
-        #textHolder {
+        .textHolder {
             position: center;
             margin: auto;
             max-width: 1234px;
@@ -405,8 +405,11 @@
 
         <main>
             <article>
-                <section>
-                    <div id="textHolder">
+                <section>                    
+                    <div class="textHolder">
+                        <noscript>
+                            <p><b>Hmm. It looks as if you don't have JavaScript enabled in your browser. Please enable JavaScript before proceeding to sign up.</b></p>
+                        </noscript>
                         <p>
                             <span>
                                 There is something unique about the beautiful sound of the string section in an orchestra. When it comes
@@ -422,7 +425,7 @@
                             The opportunity has arrived for you to foster a love for music in yourself or your child. You can also play a
                             part of growing a community of young musicians in your own neighborhood by sponsoring a student for a season. If this
                             is what you are wanting to accomplish, <!--might have to fix "If so"; that doens't make sense-->
-                            you can sign yourself or your child up for lessons <a href="signup.html" target="_blank">here.</a> If you have any questions, 
+                            you can sign yourself or your child up for lessons <a href="signup.html" target="_blank">here.</a> If you have any questions,
                             please let us know on our <a href="contact-us.html">"Contact Us"</a> page, and we will give you more information.
                         </p>
                         <div style="text-align: center;" id="videoFrame">
@@ -434,7 +437,7 @@
         </main>
 
         <footer>
-            <div id="textHolder">
+            <div class="textHolder">
                 <p style="position: relative; bottom: 0; font-size: 12.0pt;" id="developerNotice">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
             </div>
         </footer>

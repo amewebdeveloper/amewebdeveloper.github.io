@@ -39,7 +39,7 @@
             display: none;
         }
 
-        #textHolder {
+        .textHolder {
             position: center;
             margin: auto; /*comment for submit*/
             max-width: 1234px;
@@ -191,7 +191,10 @@
         <main>
             <article>
                 <section>
-                    <div id="textHolder">
+                    <div class="textHolder">
+                        <noscript>
+                            <p><b>Hmm. It looks as if you don't have JavaScript enabled in your browser. Please enable JavaScript before proceeding to sign up.</b></p>
+                        </noscript>
                         <p>If you have any questions concerning instruments, you can call Maidellyn Easey at <i>813-505-0586</i>, or you can 
                         email her at <i>maidy3e@gmail.com</i>.</p>
                         <p>If you need consulting concerning an instrument that you or your child is using, call Eric Easey at <i>813-205-0708</i>, or you can email 
@@ -222,7 +225,7 @@
         </main>
 
         <footer>
-            <div id="textHolder">
+            <div class="textHolder">
                 <p style="position: relative; bottom: 0; font-size: 12.0pt;" id="developerNotice">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
             </div>
         </footer>

@@ -41,7 +41,7 @@
             display: none;
         }
 
-        #textHolder {
+        .textHolder {
             position: center;
             margin: auto;
             max-width: 1234px;
@@ -425,8 +425,11 @@
 
         <main>
             <article>
-                <section>
-                    <div id="textHolder">
+                <section>                    
+                    <div class="textHolder">
+                        <noscript>
+                            <p><b>Hmm. It looks as if you don't have JavaScript enabled in your browser. Please enable JavaScript before proceeding to sign up.</b></p>
+                        </noscript>
                         <!--<div id="center"><img src="images\violinAndCelloStack.JPG" id="violinCelloImage" alt="Violin and cello together." /></div>-->
                         <p><b>Where can I get an instrument?</b></p>
                         <p>
@@ -445,7 +448,7 @@
                                             cello: $35/ month
                                         </div>
                                         <!--<p style="text-indent: 40px;">violin: $25/ month</p>
-                                        <p style="text-indent: 40px;">cello: $35/ month</p>-->
+                    <p style="text-indent: 40px;">cello: $35/ month</p>-->
                                     </td>
                                     <td style="padding-left: 20px;">
                                         <img src="images/violinAndCelloStack.JPG" id="violinAndCello" alt="Violin and cello stacked on top of each other." />
@@ -467,7 +470,7 @@
                             <li>We will gladly offer our advice and help you out-source your instrument.</li>
                         </ul>
                         <div id="centeredImages">
-                        <img src="images/violinAndCello.JPG" id="violinCelloNecks" alt="Violin and cello neck to neck." />
+                            <img src="images/violinAndCello.JPG" id="violinCelloNecks" alt="Violin and cello neck to neck." />
                         </div>
                         <br />
                         <p>
@@ -484,7 +487,7 @@
         </main>
 
         <footer>
-            <div id="textHolder">
+            <div class="textHolder">
                 <p style="position: relative; bottom: 0; font-size: 12.0pt;" id="developerNotice">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
             </div>
         </footer>
