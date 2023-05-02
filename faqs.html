@@ -26,7 +26,7 @@
             font-family: Calibri, sans-serif;
         }
 
-        p {
+        p, h2, li {
             font-size: 20.0pt;
         }
 
@@ -43,7 +43,7 @@
             display: none;
         }
 
-        #textHolder {
+        .textHolder {
             position: center;
             margin: auto;
             max-width: 1234px;
@@ -76,7 +76,7 @@
         }
 
         @media only screen and (max-width: 1300px) {
-            p {
+            p, h2, li {
                 font-size: 15.0pt;
             }
         }
@@ -84,7 +84,7 @@
         /*rest of CSS used for taking care of dropdown menu*/
         @media only screen and (max-width: 974px) {
 
-            p {
+            p, h2, li {
                 font-size: 15.0pt;
             }
 
@@ -180,15 +180,37 @@
     <main>
         <article>
             <section>
-                <div id="textHolder">
-                    <p>This page is still being worked on. Thank you for your patience.</p>
+                <div class="textHolder">
+                    <h2>Group lessons, or private lessons? Which is the better choice?</h2>
+                    <p>Both, group lessons and private lessons, have their pros and cons:</p>
+                    <ul>
+                        <li><b>Pro: </b>Through my personal observations, I have noticed that students who attend group lesson tend to stay motivated with learning an instrument during the initial challenging steps of learning a new instrument. The group progresses as a unit and seem to enjoy listening to the changes taking place as a team.</li>
+                        <li><b>Con: </b>The group setting can be a challenge if there is a student who needs extra time to grasp new concepts. I have found that this is easily remedied with extra go-arounds at new musical concepts/techniques with varied exercises that touch on the points of struggle. This way, the group as a whole does not become bored with repetitive exercises and enjoys the variation, while the struggling student(s) gets more practice on the new concept/technique.</li>
+                        <li><b>Pro: </b>Private lessons do offer a one-to-one setting where the lesson is tailored directly to the student’s learning personality and speed. Issues in technique are addressed in an individual basis. Progress is based on the student’s abilities and natural talent. This also seems to be a good choice for students who enjoy learning on their own and at their own pace; someone who is also self-motivated.</li>
+                        <li><b>Con: </b>Without the latter point present in the student’s innate personality, I have found that students tend to quickly become discouraged, unless he/she has family members who are motivating them either through positive feedback, or through disciplinary requirements to practice or continue with the instrument. Depending on the family culture, the latter form of motivation has proven to be effective in some instances. In a setting in which the student does not find external or internal motivation, he/she is more prone to slow down in progress and eventually will lose interest with the instrument.</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div class="textHolder">
+                    <h2>Preferred Method</h2>
+                    <p>As I have taught students throughout the years, I have found that a combination of both methods seem to work well for most students. In the initial stages, working in a group setting allows the student to learn the basics of playing the instrument with others who are going through a similar experience. Being alongside other students, listening to the instructions being given through different forms, and witnessing how others too are struggling with the initial steps, tends to motivate all in the group to continue in their progress. After a certain time period (determined by the student/parent and/or teacher), it is recommended for the student to enroll in private lessons. In this setting, he/she will be able to refine the skills that have been acquired in a group setting. However, it is recommended that the student still participate in some kind of ensemble, which allows him/her to enjoy the fruits of their work in a musical setting with other musicians.</p>
+                    <p>There are instances in which private lessons may be useful for a student who is struggling in the group setting. This accommodation can be made available at any time during the group lessons.</p>
+                    <p>As we progress at Easey Strings, I will keep time slots open for students who wish to dive into private lessons as they have made good strides in the group setting. Those who attend private lessons will be able to join any of the ensembles that will be formed in the future, at no additional cost. These ensembles, whether it be duets, trios, or an entire string ensemble, will serve as a way to allow students to share their music with the community through recitals or sacred performances. The music will primarily be classical and sacred pieces.</p>
+                </div>
+            </section>
+            <section>
+                <div class="textHolder">
+                    <h2>Music Books</h2>
+                    <p>There are several books that I prefer using. I will have some available for the student to borrow until he/she is done with that level. These are the Strictly Strings Book 1 and perhaps Book 2. There are other ensemble books that I will make available for borrowing as we move forward with our progress. However, I recommend each student to have their own Suzuki books. These will be used primarily during the private lessons, though I will use some of the music in them during group lessons. Though I do not teach the Suzuki method, I do use the Suzuki books because the music is laid out in a logical form of progression. The Suzuki books can be purchased at any music book store or on Amazon. I do have some copies that are available for purchase.</p>
+                    <p><b>Why do I recommend each student to have their own copy of the Suzuki books? </b>The pieces in the Suzuki books make for great solos for recitals or social events. As each student learns, they will need markings placed on their music which is highlighting areas in which each student needs to work individually.</p>
                 </div>
             </section>
         </article>
     </main>
 
     <footer>
-        <div id="textHolder">
+        <div class="textHolder">
             <p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
         </div>
     </footer>
