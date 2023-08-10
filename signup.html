@@ -384,11 +384,6 @@
             <img id="logo" src="files/image3071.png" alt="Easey Strings" class="center">
         </div>
         <h1 class="hiddenTags">Easey Strings</h1> <!--helps create valid code to begin with-->
-        <!--<nav style="text-align: center;">
-            <a href="instrument.html" style="font-size: 2.0em;">Instruments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="lessons.html" style="font-size: 2.0em;">Lessons</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="meet-the-teachers.html" style="font-size: 2.0em;">Meet the Teachers!</a>
-        </nav>-->
         <div id="imageCenter">
             <!--if you have any images, place them here-->
         </div>
@@ -398,8 +393,6 @@
         <article>
             <section>
                 <div id="textHolder">
-                    <!--<form id="signupForm" class="signupForm" target="hidden_frame" action="signup-stage-2.html?formResponse"
-                          enctype="text/plain" onsubmit="submitted = true;">-->
                     <noscript>
                         <p><b>Hmm. It looks as if you don't have JavaScript enabled in your browser. Please enable JavaScript before proceeding to sign up.</b></p>
                     </noscript>
@@ -414,8 +407,6 @@
                         <input type="radio" name="bothRadio" id="bothRadio" />Both me and my child<br /><br />
                         <div id="hidden">How many children are you signing up? <input type="number" id="numberOfChildren"/></div>
                         <input type="submit" id="Submit" value="Next" onclick="nextStage();"/>
-                    <!--</form>-->
-                    <!--<iframe id="hidden_frame" class="hidden_frame" style="display: none;" onload="if (submitted) { }"></iframe>-->
                 </div>
             </section>
         </article>
@@ -425,9 +416,6 @@
         <div id="textHolder">
             <p style="position: relative; bottom: 0; font-size: 12.0pt;">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
         </div>
-        <!--<button onclick="dimensions();">ButtonPress</button>
-        <button onclick="dimensionsOfViolinCello();">dimension2</button>
-        <button onclick="alert($('violinBridgeImage').width + 'x' + $('violinBridgeImage').height);">dimension3</button>-->
     </footer>
 
     <script type="text/javascript">
@@ -444,8 +432,6 @@
             alert(window.innerWidth + "x" + window.innerHeight);
         }
 
-        //, //;
-
         var youRadio = $("youRadio"),
             childRadio = $("childRadio"),
             bothRadio = $("bothRadio");
@@ -459,8 +445,6 @@
             lastName = $("lastName");
 
         var dimension = "";
-
-        //var defaultHTML = $("textHolder").innerHTML;
 
         numberOfChildren.style.display = "none";
         hidden.style.display = "none";
@@ -519,179 +503,6 @@
                     "&peopleLearning=yourChildAndYou&numberOfChildren=" + numberOfChildren.value;
             }
         }
-
-        /*numberOfChildren.oninput = function () {
-            var value = numberOfChildren.value;
-            $("children").innerHTML = "";
-            for (var i = 0; i < value; i++) {
-                var j = i + 1;
-                $("children").innerHTML += "Name of Child #" + j + ' <input type="text" id="child' + j + '" name="child' + j + '" required />&nbsp;&nbsp; ';
-                $("children").innerHTML += "Age of Child #" + j + ' <input type="number" id="age' + j + '" name="age' + j + '" required />&nbsp;&nbsp;<br>';
-                $("children").innerHTML += "Instrument Being Learned<br />";
-                $("children").innerHTML += '<input type="radio" id="violinRadio' + j + '" name="violinRadio' + j + '" />Violin<br />';
-                $("children").innerHTML += '<input type="radio" id="celloRadio' + j + '" name="celloRadio' + j + '" />Cello<br />';
-                $("children").innerHTML += '<input type="radio" id="violaRadio' + j + '" name="violaRadio' + j + '" />Viola<br />';
-                $("children").innerHTML += '<input type="radio" id="bassRadio' + j + '" name="bassRadio' + j + '" />Bass<br /><br>'; // start here tomorrow
-            }
-        }*/
-
-        window.onload = function () {
-            // = window.innerWidth; // might be needed for the function below
-            setInterval(updateAll, 50);
-        }
-
-        function updateAll() {
-            // = //;
-            // = window.innerWidth;
-            //dimensionCheck();
-            //htmlAutowriter();
-            //();
-        }
-
-        /*function autoWriterReplacement() {
-            if (browserWidth >= 1920 ||
-                browserWidth >= 1900 ||
-                browserWidth >= 1700 ||
-                browserWidth >= 1600 ||
-                browserWidth >= 1500 ||
-                browserWidth >= 1400 ||
-                browserWidth >= 1300 ||
-                // >= 1200 ||
-                // >= 1100 ||
-                // >= 1000) {
-                if (// === //) { //console.log("Already set."); }
-                else if (// >= //) {
-                    $('textHolder').innerHTML = defaultHTML;
-                }         
-            } else if (// >= 900) {
-                if (// === //) { //console.log("Already set 2."); }
-                else if (// >= //) {
-                    $('textHolder').innerHTML = `First Name <input type="text" name="firstName" id="firstName" style="width: 200px;" required />&nbsp;&nbsp;
-                        Middle Name <input type="text" name="middleName" id="middleName" style="width: 200px;" /><br>
-                        Last Name <input type="text" name="lastName" id="lastName" style="width: 200px;" required /><br /><br />
-                        Email <input type="text" name="emailPart" id="emailPart" required /><br>
-                        Phone Number (preferably mobile phone) <input type="text" name="phoneNumber" id="phoneNumber" placeholder="(e.g. 1800XXXXXXX)" /><br /><br />
-                        Who is learning how to play an instrument?<br />
-                        <input type="radio" name="youRadio" id="youRadio" />Me<br />
-                        <input type="radio" name="childRadio" id="childRadio" />My child<br /> <!--might use JavaScript to turn radios on or off-->
-                        <input type="radio" name="bothRadio" id="bothRadio" />Both me and my child<br /><br />
-                        <div id="hidden">How many children are you signing up? <input type="number" id="numberOfChildren"/></div>
-                        <input type="submit" id="Submit" value="Next" onclick="nextStage();"/>`;
-                }               
-            }
-        }
-
-        //function dimensionCheck() { // edit this later
-            if (// >= 1920 && window.innerHeight >= 1080 ||
-                // >= 1920 && window.innerHeight >= 937 ||
-                // >= 1920 ||
-                // >= 1900 ||
-                // >= 1700 ||
-                // >= 1600 ||
-                // >= 1500 ||
-                // >= 1400 ||
-                window.innerWidth >= 1920 && window.innerHeight >= 1080 ||
-                window.innerWidth >= 1920 && window.innerHeight >= 937 ||
-                window.innerWidth >= 1920 ||
-                window.innerWidth >= 1900 ||
-                window.innerWidth >= 1700 ||
-                window.innerWidth >= 1600 ||
-                window.innerWidth >= 1500 ||
-                window.innerWidth >= 1400) { // should fix download tab bug
-                dimension = "1400";
-            } else if (// >= 1330 || window.innerWidth >= 1330) {
-                dimension = "1330";
-            } else if (// >= 1280 && // >= 680 ||
-                window.innerWidth >= 1280 && window.innerHeight >= 680) {
-                dimension = "1280x680";
-            } else if (// >= 1280 || window.innerWidth >= 1280) {
-                dimension = "1280";
-            } else if (// > 918 || window.innerWidth > 918) {
-                dimension = "918";
-            } else if (// >= 863 || window.innerWidth >= 863) {
-                dimension = "863";
-            } else if (// >= 817 || window.innerWidth >= 817 &&
-                window.innerHeight >= 329 || window.innerWidth >= 817) { // based off of LG phone
-                dimension = "817";
-            } else if (// >= 800 || window.innerWidth >= 800 && window.innerHeight >= 1160) {
-                dimension = "800x1160";
-            } else if (// >= 800 || window.innerWidth >= 800) { // when not sure what to do with width of tablet
-                dimension = "800";
-            } else if (// >= 480 || window.innerWidth >= 480) {
-                dimension = "480";
-            } else { // very small
-                dimension = "So small that you can't see!";
-            }
-        }
-        function htmlAutowriter() { // replace with media query; might need a bit of work
-            if (// >= 1920 && window.innerHeight >= 1080 && dimension === "1400" ||
-                // >= 1920 && window.innerHeight >= 937 && dimension === "1400" ||
-                // >= 1920 && dimension === "1400" ||
-                // >= 1900 && dimension === "1400" ||
-                // >= 1700 && dimension === "1400" ||
-                // >= 1600 && dimension === "1400" ||
-                // >= 1500 && dimension === "1400" ||
-                // >= 1400 && dimension === "1400" ||
-                window.innerWidth >= 1920 && window.innerHeight >= 1080 && dimension === "1400" ||
-                window.innerWidth >= 1920 && window.innerHeight >= 937 && dimension === "1400" ||
-                window.innerWidth >= 1920 && dimension === "1400" ||
-                window.innerWidth >= 1900 && dimension === "1400" ||
-                window.innerWidth >= 1700 && dimension === "1400" ||
-                window.innerWidth >= 1600 && dimension === "1400" ||
-                window.innerWidth >= 1500 && dimension === "1400" ||
-                window.innerWidth >= 1400 && dimension === "1400") { // should fix download tab bug
-                //console.log("Everything is left the way it is.");
-            } else if (// >= 1330 && dimension === "1330" || window.innerWidth >= 1330 && dimension === "1330") {
-                //console.log("Everything is left the way it is.");
-                $('textHolder').innerHTML = defaultHTML;
-            } else if (// >= 1280 && // >= 680 && dimension === "1280x680" ||
-                window.innerWidth >= 1280 && window.innerHeight >= 680 && dimension === "1280x680") {
-                //console.log("Change 1");
-                $('textHolder').innerHTML = defaultHTML;
-            } else if (// >= 1280 && dimension === "1280" || window.innerWidth >= 1280 && dimension === "1280") {
-                //console.log("Change 2");
-                $('textHolder').innerHTML = defaultHTML;
-            } else if (// > 918 && dimension === "918" || window.innerWidth > 918 && dimension === "918") {
-                //console.log("Change 2b");
-                $('textHolder').innerHTML = defaultHTML;
-            } else if (// >= 863 && dimension === "863" || window.innerWidth >= 863 && dimension === "863") {
-                //console.log("Change 3b");
-                $('textHolder').innerHTML = `First Name <input type="text" name="firstName" id="firstName" style="width: 200px;" required />&nbsp;&nbsp;
-                        Middle Name <input type="text" name="middleName" id="middleName" style="width: 200px;" /><br>
-                        Last Name <input type="text" name="lastName" id="lastName" style="width: 200px;" required /><br /><br />
-                        Email <input type="text" name="emailPart" id="emailPart" required /><br>
-                        Phone Number (preferably mobile phone) <input type="text" name="phoneNumber" id="phoneNumber" placeholder="(e.g. 1800XXXXXXX)" /><br /><br />
-                        Who is learning how to play an instrument?<br />
-                        <input type="radio" name="youRadio" id="youRadio" />Me<br />
-                        <input type="radio" name="childRadio" id="childRadio" />My child<br /> <!--might use JavaScript to turn radios on or off-->
-                        <input type="radio" name="bothRadio" id="bothRadio" />Both me and my child<br /><br />
-                        <div id="hidden">How many children are you signing up? <input type="number" id="numberOfChildren"/></div>
-                        <input type="submit" id="Submit" value="Next" onclick="nextStage();"/>`;
-            } else if (// >= 817 && dimension === "817" || window.innerWidth >= 817 &&
-                window.innerHeight >= 329 && dimension === "817" || window.innerWidth >= 817 && dimension === "817") { // based off of LG phone
-                //console.log("Change 3");
-                $('textHolder').innerHTML = `First Name <input type="text" name="firstName" id="firstName" style="width: 200px;" required />&nbsp;&nbsp;
-                        Middle Name <input type="text" name="middleName" id="middleName" style="width: 200px;" /><br>
-                        Last Name <input type="text" name="lastName" id="lastName" style="width: 200px;" required /><br /><br />
-                        Email <input type="text" name="emailPart" id="emailPart" required />&nbsp;&nbsp;
-                        Phone Number (preferably mobile phone) <input type="text" name="phoneNumber" id="phoneNumber" placeholder="(e.g. 1800XXXXXXX)" /><br /><br />
-                        Who is learning how to play an instrument?<br />
-                        <input type="radio" name="youRadio" id="youRadio" />Me<br />
-                        <input type="radio" name="childRadio" id="childRadio" />My child<br /> <!--might use JavaScript to turn radios on or off-->
-                        <input type="radio" name="bothRadio" id="bothRadio" />Both me and my child<br /><br />
-                        <div id="hidden">How many children are you signing up? <input type="number" id="numberOfChildren"/></div>
-                        <input type="submit" id="Submit" value="Next" onclick="nextStage();"/>`;
-            } else if (// >= 800 && dimension === "800x1160" || window.innerWidth >= 800 && window.innerHeight >= 1160 && dimension==="800x1160") {
-                //console.log("Change 4"); 
-            } else if (// >= 800 && dimension === "800" || window.innerWidth >= 800 && dimension === "800") { // when not sure what to do with width of tablet
-                //console.log("Change 5");
-            } else if (// >= 480 && dimension === "480" || window.innerWidth >= 480 && dimension === "480") {
-                //console.log("Change 5");
-            } else { // very small
-                //console.log("Now we're getting tiny!");
-                
-            }
-        }*/
     </script>
 </body>
 </html>
