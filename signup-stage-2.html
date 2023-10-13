@@ -18,8 +18,6 @@
         gtag('config', 'G-5QLM5JP8D6', { 'debug_mode': true });
     </script>
 
-    <!--making sure that Google Analytics is actually working-->
-
     <link href="https://fonts.cdnfonts.com/css/lucida-calligraphy-new" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/violinAndCelloStack.ico">
     <style>
@@ -41,10 +39,6 @@
             font-size: 15pt;
         }
 
-        /*section {
-                padding: 0px 180px 0px 180px;
-            }*/
-
         .hiddenTags {
             font-size: 0.0000000000000000000000000000000000000000000001px;
             display: none;
@@ -55,12 +49,6 @@
             margin: auto;
             max-width: 1234px;
             font-size: 15pt;
-            /*border: solid;
-                border-left-color: black;
-                border-right-color: black;
-                border-top-color:none;
-                border-bottom-color: none;*/
-            /*commented code was used for testing*/
             padding: 10px;
         }
 
@@ -80,14 +68,14 @@
 
 
         .dropdownButton {
-            visibility: hidden; /*display: none*/
+            visibility: hidden;
         }
 
         #violinCelloImage {
             max-height: 267px;
             position: absolute;
             top: 320px;
-            right: 410px; /*might be used if wanted*/
+            right: 410px;
         }
 
         #violinBridgeImage {
@@ -99,15 +87,11 @@
 
         .fancyLetters {
             font-family: "Lucida Calligraphy New", "Lucida Calligraphy", sans-serif;
-            /*In other words, sans-serif is the last choice the site can make
-                if the previous two fonts are not found.
-            */
         }
 
         .bassInfo {
             display: none;
             font-size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001px;
-            /*this shouldn't be seen*/
         }
 
         ::-webkit-scrollbar {
@@ -120,7 +104,6 @@
             }
 
             #violinCelloImage {
-                /*max-width: 0;*/
                 max-height: 267px;
                 position: absolute;
                 top: 320px;
@@ -128,7 +111,6 @@
             }
 
             #violinBridgeImage {
-                /*max-width: 350px;*/
                 max-width: 401px;
                 position: absolute;
                 top: 330px;
@@ -142,7 +124,6 @@
             }
 
             #violinCelloImage {
-                /*max-width: 0;*/
                 max-height: 267px;
                 position: absolute;
                 top: 320px;
@@ -150,7 +131,6 @@
             }
 
             #violinBridgeImage {
-                /*max-width: 350px;*/
                 max-width: 401px;
                 position: absolute;
                 top: 330px;
@@ -164,7 +144,6 @@
             }
 
             #violinCelloImage {
-                /*max-width: 0;*/
                 max-height: 267px;
                 position: absolute;
                 top: 320px;
@@ -172,7 +151,6 @@
             }
 
             #violinBridgeImage {
-                /*max-width: 350px;*/
                 max-width: 401px;
                 position: absolute;
                 top: 330px;
@@ -186,7 +164,6 @@
             }
 
             #violinCelloImage {
-                /*max-width: 0;*/
                 max-height: 267px;
                 position: absolute;
                 top: 320px;
@@ -194,7 +171,6 @@
             }
 
             #violinBridgeImage {
-                /*max-width: 350px;*/
                 max-width: 401px;
                 position: absolute;
                 top: 330px;
@@ -208,7 +184,6 @@
             }
 
             #violinCelloImage {
-                /*max-width: 0;*/
                 max-height: 267px;
                 position: absolute;
                 top: 320px;
@@ -216,7 +191,6 @@
             }
 
             #violinBridgeImage {
-                /*max-width: 350px;*/
                 max-width: 401px;
                 position: absolute;
                 top: 330px;
@@ -230,12 +204,6 @@
             }
 
             #violinCelloImage {
-                /*max-width: 280px;
-                    position: relative;
-                    top: 0;
-                    right: 0;*/
-                /*might be used at some point if wanted*/
-                /*top: 265px;*/
                 max-height: 187px;
                 position: absolute;
                 top: 270px;
@@ -387,7 +355,7 @@
         <div style="text-align: center;">
             <img id="logo" src="files/image3071.png" alt="Easey Strings" class="center">
         </div>
-        <h1 class="hiddenTags">Easey Strings</h1> <!--helps create valid code to begin with-->
+        <h1 class="hiddenTags">Easey Strings</h1>
         <div id="imageCenter">
             <!--if you have any images, place them here-->
         </div>
@@ -405,38 +373,12 @@
                         <input type="text" name="email" id="email" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" required />
                         <input type="text" name="phoneNumber" id="phoneNumber" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" required />
                         <input type="text" name="peopleLearning" id="peopleLearning" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" required />
-                        <!--<input type="text" name="instrumentsBeingLearned" id="instrumentsBeingLearned" required />-->
                         <textarea name="instrumentsBeingLearned" id="instrumentsBeingLearned" width="2000" height="2000"  style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" required></textarea>
                         <code id="viewJSON"  style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;"></code><!--for viewing the data-->
-                        <!--will be taken out later-->
-                        <!--<input type="submit" id="movingSubmitButton" value="Submit" />-->
                     </form>
-                    <!--<iframe name="hidden_frame" id="hidden_frame" style="display: none; font-size: 0.000000000000000000000000000000000000000000000000000000000000000000001px; width: 0.00000000000000000000000000000000000000000000000000000000000000000001px;" onload="if (submitted) { }"></iframe><br />-->
                     <form id="studentFormGenerator">
                     </form><br /><br />
-                    <!--<input type="submit" value="Submit" onclick="retrieveItems();" />-->
                     <div id="formsGenerator">
-                        <!--<form id="yourselfForm">
-                            <fieldset style="border: none;">
-                                <legend>What instrument are you wanting to learn?</legend>
-                                <div>
-                                    <input type="radio" id="instrumentChoice1Parent" name="instrument" value="violin" />
-                                    <label for="instrumentChoice1Parent">Violin</label><br />
-
-                                    <input type="radio" id="instrumentChoice2Parent" name="instrument" value="cello" />
-                                    <label for="instrumentChoice2Parent">Cello</label><br />
-
-                                    <input type="radio" id="instrumentChoice3Parent" name="instrument" value="viola" />
-                                    <label for="instrumentChoice3Parent">Viola</label><br />
-
-                                    <input type="radio" id="instrumentChoice4Parent" name="instrument" value="bass" />
-                                    <label for="instrumentChoice4Parent">Bass</label><br />
-                                </div>
-                                <div>-->
-                                    <!--<button type="submit">Submit</button>-->
-                                <!--</div>
-                            </fieldset>
-                        </form>-->
                     </div>
                     <p><a href="javascript:window.history.back();" class="previousStage"><== Previous Stage</a></p>
                 </div>
@@ -448,9 +390,6 @@
         <div id="textHolder">
             <p style="position: relative; bottom: 0; font-size: 12.0pt;" id="developerNotice">Experiencing bugs on this site? Contact our developer <a href="developer-contact.html" target="_blank">here.</a></p>
         </div>
-        <!--<button onclick="dimensions();">ButtonPress</button>
-        <button onclick="dimensionsOfViolinCello();">dimension2</button>
-        <button onclick="alert($('violinBridgeImage').width + 'x' + $('violinBridgeImage').height);">dimension3</button>-->
     </footer>
 
     <script type="text/javascript">
@@ -496,14 +435,12 @@
                 peopleLearning: peopleLearningValue,
                 numberOfChildren: numberOfChildrenValue
             };
-            //console.log(object);
             // The data will be useful when generating more fields.
             // After the information is sent over, the children information will be put into an
             // array, and then sent to the form.
             fillFormFields(firstNameValue, middleNameValue, lastNameValue, emailValue, phoneNumberValue, peopleLearningValue);
             if (peopleLearningValue === "justYou" ||
                 peopleLearningValue === "yourChildAndYou") {
-                //$("yourselfForm").style.display = "initial";
                 $("formsGenerator").innerHTML += `<form id="yourselfForm">
                             <fieldset style="border: none;">
                                 <legend>What instrument are you wanting to learn?</legend>
@@ -530,7 +467,7 @@
             setInterval(updateAll, 0.01);
         }
 
-        function nextStage() { // work on this function; there's a bug in there
+        function nextStage() {
             var everythingFilled = false;
             for (var i = 0; i < numberOfChildrenValue; i++) {
                 var j = i + 1;
@@ -540,18 +477,10 @@
                 }
                 everythingFilled = true;
             }
-
-            //if (!everythingFilled) {
-            //    alert("You are forgetting to fill in a few fields. Please check to make sure all the information has been placed into the form.");
-            //    return false;
-            //    //moveToNextPage();
-            //} else { // If the users are still here, this message will be displayed to them.
                 moveToNextPage();
-            //}
-        } // test this later
+        }
 
         function updateAll() {
-            //console.log(list);
             retrieveItems();
             updateInstrumentsBeingLearned();
         }
@@ -561,12 +490,11 @@
         }
 
         function updateInstrumentsBeingLearned() {
-            //console.log("This function is running.");
             $("instrumentsBeingLearned").value = "[" + list + "]";
             $('viewJSON').innerHTML = "[" + list + "]";
         }
 
-        function fillFormFields(firstName, middleName, lastName, email, phoneNumber, peopleLearning) { // for actual form; other fields indirect
+        function fillFormFields(firstName, middleName, lastName, email, phoneNumber, peopleLearning) {
             $("firstName").value = firstName;
             $("middleName").value = middleName;
             $("lastName").value = lastName;
@@ -576,7 +504,6 @@
         }
 
         function generateFields(number) {
-            //alert(number);
             for (var i = 0; i < number; i++) {
                 var j = i + 1;
                 $("formsGenerator").innerHTML += `<br><br><form id="form${j}">
@@ -605,14 +532,6 @@
                                     </div>
                                 </fieldset>
                             </form>`;
-                $("extraJS").innerHTML += `var childName${j} = $("childName${j}"),
-age${j} = $("age${j}"),
-instrumentChoice1${j} = $("instrumentChoice1${j}"),
-instrumentChoice1${j} = $("instrumentChoice2${j}"),
-instrumentChoice1${j} = $("instrumentChoice3${j}"),
-instrumentChoice1${j} = $("instrumentChoice4${j}");
-
-`;
             }
 
             $("formsGenerator").innerHTML += '<input type="submit" value="Next" onclick="nextStage();" />';
@@ -622,36 +541,17 @@ instrumentChoice1${j} = $("instrumentChoice4${j}");
 
         function retrieveItems() {
             list = [];
-            /*if (peopleLearningValue === "justYou") {
-                list.push(`{
-                    studentName: ${firstNameValue},
-                    studentAge: "NA",
-                    instrument: ${parentInstrumentRadio}
-                }`);
-            }*/
             for (var i = 0; i < numberOfChildrenValue; i++) {
                 var j = i + 1;
                 var instrumentRadio, parentInstrumentRadio;
-                if ($('instrumentChoice1' + j).checked) { // might replace this with generated JavaScript
+                if ($('instrumentChoice1' + j).checked) {
                     instrumentRadio = "Violin";
-                    //$('celloRadio' + j).checked = false;
-                    //$('violaRadio' + j).checked = false;
-                    //$('bassRadio' + j).checked = false;
                 } else if ($('instrumentChoice2' + j).checked) {
                     instrumentRadio = "Cello";
-                    //$('violinRadio' + j).checked = false;
-                    //$('violaRadio' + j).checked = false;
-                    //$('bassRadio' + j).checked = false;
                 } else if ($('instrumentChoice3' + j).checked) {
                     instrumentRadio = "Viola";
-                    //$('celloRadio' + j).checked = false;
-                    //$('violinRadio' + j).checked = false;
-                    //$('bassRadio' + j).checked = false;
                 } else {
                     instrumentRadio = "Bass";
-                    //$('celloRadio' + j).checked = false;
-                    //$('violinRadio' + j).checked = false;
-                    //$('violaRadio' + j).checked = false;
                 }
 
                 list.push(`{ "studentName":"` + $('childName' + j).value + `", "studentAge":` + $('age' + j).value + `, "instrument":"` + instrumentRadio + `"}`);
@@ -660,24 +560,12 @@ instrumentChoice1${j} = $("instrumentChoice4${j}");
             if (peopleLearningValue === "yourChildAndYou" || peopleLearningValue === "justYou") {
                 if ($('instrumentChoice1Parent').checked) {
                     parentInstrumentRadio = "Violin";
-                    //$('celloRadioParent').checked = false;
-                    //$('violaRadioParent').checked = false;
-                    //$('bassRadioParent').checked = false;
                 } else if ($('instrumentChoice2Parent').checked) {
                     parentInstrumentRadio = "Cello";
-                    //$('violinRadioParent').checked = false;
-                    //$('violaRadioParent').checked = false;
-                    //$('bassRadioParent').checked = false;
                 } else if ($('instrumentChoice3Parent').checked) {
                     parentInstrumentRadio = "Viola";
-                    //$('violinRadioParent').checked = false;
-                    //$('celloRadioParent').checked = false;
-                    //$('bassRadioParent').checked = false;
                 } else {
                     parentInstrumentRadio = "Bass";
-                    //$('violinRadioParent').checked = false;
-                    //$('celloRadioParent').checked = false;
-                    //$('violaRadioParent').checked = false;
                 }
             }
 
@@ -686,7 +574,5 @@ instrumentChoice1${j} = $("instrumentChoice4${j}");
             }
         }
     </script>
-
-    <script id="extraJS"></script> <!--use by field generator to make fields interactive-->
 </body>
 </html>

@@ -18,8 +18,7 @@
 
         gtag('config', 'G-5QLM5JP8D6', { 'debug_mode': true });
     </script>
-
-    <!--making sure that Google Analytics is actually working-->
+        
     <link rel="icon" type="image/x-icon" href="images/violinAndCelloStack.ico">
     <style>
         body {
@@ -34,10 +33,6 @@
             color: rebeccapurple;
         }
 
-        /*section {
-                padding: 0px 180px 0px 180px;
-            }*/
-
         .hiddenTags {
             font-size: 0.0000000000000000000000000000000000000000000001px;
             display: none;
@@ -45,14 +40,8 @@
 
         .textHolder {
             position: center;
-            margin: auto; /*comment for submit*/
+            margin: auto;
             max-width: 1234px;
-            /*border: solid;
-                border-left-color: black;
-                border-right-color: black;
-                border-top-color:none;
-                border-bottom-color: none;*/
-            /*commented code was used for testing*/
             padding: 10px;
         }
 
@@ -75,7 +64,7 @@
         }
 
         .dropdownButton {
-            visibility: hidden; /*display: none*/
+            visibility: hidden; 
         }
 
         input {
@@ -89,7 +78,6 @@
             font-family: Calibri, sans-serif;
             font-size: 12pt;
             width: 190px;
-            /*width: 230px;*/
         }
 
         @media only screen and (max-width: 1300px) {
@@ -185,12 +173,7 @@
             <div style="text-align: center;">
             <img id="logo" src="files/image3071.png" alt="Easey Strings" class="center">
             </div>
-            <h1 class="hiddenTags">Easey Strings</h1> <!--helps create valid code to begin with-->
-            <!--<nav style="text-align: center;">
-                <a href="instrument.html" style="font-size: 2.0em;">Instruments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="lessons.html" style="font-size: 2.0em;">Lessons</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="meet-the-teachers.html" style="font-size: 2.0em;">Meet the Teachers!</a>
-            </nav>-->
+            <h1 class="hiddenTags">Easey Strings</h1> 
         </header>
 
         <main>
@@ -205,16 +188,13 @@
                         <p>If you need consulting concerning an instrument that you or your child is using, call Eric Easey at <i>813-205-0708</i>, or you can email 
                         him at <i>eric.easey@yahoo.com</i>.</p>
                         <p id="changingParagraph">Or, you can just send a message to us right here on this page!</p>
-                        <!--<p>Or, you can just fill out this form <a href="https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=sf_link" target="_blank">here.</a></p>-->
                     </div>
                     <div id="centeredForm">
-                        <!--https://docs.google.com/forms/d/e/1FAIpQLSd16ehyDGw-u9XLpXjBHI1oYFaKFkzAbLeL22T1cIBWYmQgdw/viewform?usp=pp_url&entry.1758432991=emailAddress&entry.1823717675=subjectMatter&entry.308269570=questionBeingAsked-->
                         <form name="contactform" id="contactform"
                               class="contactform"
                               action="https://formsubmit.io/send/6bab1529-9c5a-41da-94f1-135e949f1b90"
                               method="POST">
-                            <!--onsubmit="submitted = true;">-->
-                            <input name="_redirect" type="hidden" id="messageSent" value="https://easeystrings.com/message-sent.html" /> <!--still trying to test on safari-->
+                            <input name="_redirect" type="hidden" id="messageSent" value="https://easeystrings.com/message-sent.html" />
                             <input type="text" name="email" id="email" placeholder="Enter Email Address Here" required /><br />
                             <input type="text" name="phone" id="phone" placeholder="Enter Mobile Number Here"/><br />
                             <input type="text" name="subject" id="subject" placeholder="Enter Subject Here" required /><br />
@@ -223,7 +203,6 @@
                             <input name="_formsubmit_id" type="text" style="display:none">
                             <input type="submit" id="submit" value="Send" />
                         </form>
-                        <!--<iframe id="hidden_frame" name="hidden_frame" style="display: none;" onload="if (submitted) { }"></iframe>-->
                     </div>
                 </section>
             </article>
@@ -239,8 +218,6 @@
             function $(id) {
                 return document.getElementById(id);
             }
-
-            //var browserWidth = 0;
 
             var textarea = $("question");
 

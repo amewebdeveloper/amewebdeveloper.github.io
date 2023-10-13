@@ -58,7 +58,8 @@
             }
 
             .dropdownButton {
-                visibility: hidden; /*display: none*/
+                visibility: hidden; 
+
             }
 
             input {
@@ -72,7 +73,7 @@
                 font-family: Calibri, sans-serif;
                 font-size: 12pt;
                 width: 190px;
-                /*width: 230px;*/
+    
             }
 
             @media only screen and (max-width: 1300px) {
@@ -167,7 +168,7 @@
             <div align="center">
             <img id="logo" src="files/image3071.png" alt="Easey Strings" class="center">
             </div>
-            <h1 class="hiddenTags">Easey Strings</h1> <!--helps create valid code to begin with-->
+            <h1 class="hiddenTags">Easey Strings</h1> 
             <!--<nav align="center">
                 <a href="instrument.html" style="font-size: 2.0em;">Instruments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="pricing.html" style="font-size: 2.0em;">Pricing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
