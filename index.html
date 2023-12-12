@@ -524,12 +524,12 @@
                 alert("Available dimensions:\n\n" + window.screen.availWidth + "x" + window.screen.availWidth);
             }
 
-            //window.onload = function () {
-            //    setInterval(checkScreenDimensions, 50);
-            //}
+            window.onload = function () {
+                setInterval(checkScreenDimensions, 50);
+            }
 
             function checkScreenDimensions() {
-                if (window.screen.width === 1098 && window.screen.height === 514) {
+                if (window.screen.width === 1098 && window.screen.height === 686) {
                     var violinCelloImage = $("violinCelloImage");
                     var violinBridgeImage = $("violinBridgeImage");
                     violinCelloImage.style.top = violinBridgeImage.style.top = "650px";
