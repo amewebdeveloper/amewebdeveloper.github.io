@@ -244,8 +244,16 @@
             #violinBridgeImage {
                 max-height: 187px;
                 position: absolute;
-                top: 580px;
+                /*top: 625px;*/
+                top:  580px;
                 right: 0;
+            }
+
+            #violinCelloImage {
+                max-height: 187px;
+                position: absolute;
+                /*top: 625px;*/
+                top: 580px;
             }
         }
         /*rest of CSS used for taking care of dropdown menu*/
@@ -510,7 +518,10 @@
             }
 
             function dimensions() {
-                alert(window.innerWidth + "x" + window.innerHeight);
+                alert("Inner dimensions:\n\n" + window.innerWidth + "x" + window.innerHeight);
+                alert("Outer dimensions:\n\n" + window.outerWidth + "x" + window.outerHeight);
+                alert("Screen dimensions:\n\n" + window.screen.width + "x" + window.screen.height);
+                alert("Available dimensions:\n\n" + window.screen.availWidth + "x" + window.screen.availWidth);
             }
         </script>
     </body>
