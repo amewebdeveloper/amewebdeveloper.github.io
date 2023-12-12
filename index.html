@@ -529,9 +529,11 @@
             }
 
             function checkScreenDimensions() {
-                if (window.screen.width === 1098 && window.screen.height === 686) {
-                    var violinCelloImage = $("violinCelloImage");
-                    var violinBridgeImage = $("violinBridgeImage");
+                var violinCelloImage = $("violinCelloImage");
+                var violinBridgeImage = $("violinBridgeImage");
+                if (window.innerWidth === 1098 && window.innerHeight === 514) {
+                    violinCelloImage.style.top = violinBridgeImage.style.top = "660px;"
+                } else if (window.screen.width === 1098 && window.screen.height === 686) {
                     violinCelloImage.style.top = violinBridgeImage.style.top = "650px";
                 }
             }
