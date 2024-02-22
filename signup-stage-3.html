@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -438,19 +438,21 @@
             peopleLearningValue,
             listJSON;
         var signupform = $("signupform");
+		var label; // default result
         var generatedInformation = $("generatedInformation");
 
         window.onload = function () {
             url = new URLSearchParams(window.location.search);
-            firstNameValue = url.get("firstName");
-            middleNameValue = url.get("middleName");
-            lastNameValue = url.get("lastName");
-            emailValue = url.get("email");
-            phoneNumberValue = url.get("phoneNumber");
-            peopleLearningValue = url.get("peopleLearning");
+            firstNameValue = showHTMLCode(url.get("firstName"));
+            middleNameValue = showHTMLCode(url.get("middleName"));
+            lastNameValue = showHTMLCode(url.get("lastName"));
+            emailValue = showHTMLCode(url.get("email"));
+            phoneNumberValue = showHTMLCode(url.get("phoneNumber"));
+            peopleLearningValue = showHTMLCode(url.get("peopleLearning"));
             listJSON = url.get("instrumentsBeingLearned");
             listJSON = JSON.parse(listJSON);
-            $("showField1").innerHTML = "Parent Name: " + firstNameValue + " " + lastNameValue;
+			label = listJSON.length === 1 && listJSON[0].studentName === firstNameValue ? "Name: " : "Parent Name: ";
+            $("showField1").innerHTML = label + firstNameValue + " " + lastNameValue;
             $("showField2").innerHTML = "Email: " + emailValue;
             $("showField3").innerHTML = "Phone Number: " + phoneNumberValue;
             $("showField4").innerHTML = checkLearningValue();
@@ -460,6 +462,10 @@
             $("people_learning").value = checkLearningValue();
             showLearningData(listJSON);
         }
+
+		function showHTMLCode(output) {
+			return output.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+		}
 
         function checkLearningValue() {
             if (peopleLearningValue === "justYou") {
@@ -487,8 +493,7 @@
                 generatedInformation.innerHTML += age !== null ? `<p>Student Name: ${name}<p>
                                                    <p>Student Age: ${age}</p>
                                                    <p>Instrument Being Learned: ${instrument}</p>
-                                                    <br><br>` : `<p>Student Name: ${name}<p>
-                                                   <p>Instrument Being Learned: ${instrument}</p>` ;
+                                                    <br><br>` : `<p>Instrument <b>${firstNameValue} ${lastNameValue}</b> Is Learning: ${instrument}</p>` ;
                 $("instruments_being_learned_by_each_person").value += `Student Name: ${name}\nStudent Age: ${age}\nInstrument Being Learned: ${instrument}\n\n`;
             }
         }
