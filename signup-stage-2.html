@@ -461,6 +461,15 @@
                                     <!--<button type="submit">Submit</button>-->
                                 </div>
                             </fieldset>
+                            <fieldset style="border: none;">
+                                <legend>Do you want to have your lessons online or in-person?</legend>
+                                <div>
+                                    <input type="radio" id="classChoice1Parent" name="lessonType" value="online">
+                                    <label for="classChoice1Parent">Online</label><br>
+                                    <input type="radio" id="classChoice2Parent" name="lessonType" value="in-person">
+                                    <label for="classChoice2Parent">In-Person</label><br>
+                                </div>
+                            </fieldset>
                         </form>`;
             }
             generateFields(numberOfChildrenValue);
@@ -531,6 +540,16 @@
                                         <!--<button type="submit">Submit</button>-->
                                     </div>
                                 </fieldset>
+                                <fieldset style="border: none;">
+                                    <legend>Does this student want online lessons or in-person lessons?</legend>
+                                    <div>
+                                        <input type="radio" id="classChoice1${j}" name="lessonType" value="online">
+                                        <label for="classChoice1${j}">Online</label><br>
+
+                                        <input type="radio" id="classChoice2${j}" name="lessonType" value="in-person">
+                                        <label for="classChoice2${j}">In-Person</label><br>
+                                    </div>
+                                </fieldset>
                             </form>`;
             }
 
@@ -540,37 +559,46 @@
 
 
         function retrieveItems() {
+            var lessonType;
             list = [];
             for (var i = 0; i < numberOfChildrenValue; i++) {
                 var j = i + 1;
                 var instrumentRadio, parentInstrumentRadio;
                 if ($('instrumentChoice1' + j).checked) {
-                    instrumentRadio = "Violin";
+                    instrumentRadio = $('instrumentChoice1' + j).value;
                 } else if ($('instrumentChoice2' + j).checked) {
-                    instrumentRadio = "Cello";
+                    instrumentRadio = $('instrumentChoice2' + j).value;
                 } else if ($('instrumentChoice3' + j).checked) {
-                    instrumentRadio = "Viola";
-                } else {
-                    instrumentRadio = "Bass";
+                    instrumentRadio = $('instrumentChoice3' + j).value;
                 }
 
-                list.push(`{ "studentName":"` + $('childName' + j).value + `", "studentAge":` + $('age' + j).value + `, "instrument":"` + instrumentRadio + `"}`);
+                if($('classChoice1' + j).checked) {
+                    lessonType = $('classChoice1' + j).value; // just to simplify things a bit
+                } else if($('classChoice2' + j).checked) {
+                    lessonType = $('classChoice2' + j).value;
+                }
+
+                list.push(`{ "studentName":"` + $('childName' + j).value + `", "studentAge":` + $('age' + j).value + `, "instrument":"` + instrumentRadio + `", "lessonType":"` + lessonType + `"}`);
             }
 
             if (peopleLearningValue === "yourChildAndYou" || peopleLearningValue === "justYou") {
                 if ($('instrumentChoice1Parent').checked) {
-                    parentInstrumentRadio = "Violin";
+                    parentInstrumentRadio = $('instrumentChoice1Parent').value;
                 } else if ($('instrumentChoice2Parent').checked) {
-                    parentInstrumentRadio = "Cello";
+                    parentInstrumentRadio = $('instrumentChoice2Parent').value;
                 } else if ($('instrumentChoice3Parent').checked) {
-                    parentInstrumentRadio = "Viola";
-                } else {
-                    parentInstrumentRadio = "Bass";
+                    parentInstrumentRadio = $('instrumentChoice3Parent').value;
+                }
+
+                if($('classChoice1Parent').checked) {
+                    lessonType = $('classChoice1Parent').value; // variable can be used over and over since it was used over and over in the loop
+                } else if($('classChoice2Parent').checked) {
+                    lessonType = $('classChoice2Parent').value;
                 }
             }
 
             if (peopleLearningValue === "yourChildAndYou" || peopleLearningValue === "justYou") {
-                list.push(`{ "studentName":"` + firstNameValue + `", "studentAge": "NA", "instrument":"` + parentInstrumentRadio + `"}`);
+                list.push(`{ "studentName":"` + firstNameValue + `", "studentAge": "NA", "instrument":"` + parentInstrumentRadio + `", "lessonType":"` + lessonType + `"}`);
             }
         }
     </script>

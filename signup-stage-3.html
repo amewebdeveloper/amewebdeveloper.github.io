@@ -490,11 +490,14 @@
                 var name = data[i].studentName == firstNameValue ? data[i].studentName + " (parent)" : data[i].studentName;
                 var age = data[i].studentAge !== "NA" ? data[i].studentAge : null;
                 var instrument = data[i].instrument;
+                var lessonType = data[i].lessonType;
                 generatedInformation.innerHTML += age !== null ? `<p>Student Name: ${name}<p>
                                                    <p>Student Age: ${age}</p>
                                                    <p>Instrument Being Learned: ${instrument}</p>
-                                                    <br><br>` : `<p>Instrument <b>${firstNameValue} ${lastNameValue}</b> Is Learning: ${instrument}</p>` ;
-                $("instruments_being_learned_by_each_person").value += `Student Name: ${name}\nStudent Age: ${age}\nInstrument Being Learned: ${instrument}\n\n`;
+                                                   <p>Lesson Type: ${lessonType}</p>
+                                                    <br><br>` : `<p>Instrument <b>${firstNameValue} ${lastNameValue}</b> Is Learning: ${instrument}</p>
+                                                                 <p>Lesson Type: ${lessonType}</p>` ;
+                $("instruments_being_learned_by_each_person").value += `Student Name: ${name}\nStudent Age: ${age}\nInstrument Being Learned: ${instrument}\nLesson Type: ${lessonType}\n\n`;
             }
         }
 
