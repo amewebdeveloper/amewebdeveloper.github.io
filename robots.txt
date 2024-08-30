@@ -1,2 +1,15 @@
+User-agent: facebookexternalhit
+Allow: /index.html
+Allow: /about-us.html
+Allow: /contact-us.html
+Allow: /lessons.html
+Allow: /instrument.html
+Allow: /meet-the-teachers.html
+Allow: /signup.html
+Allow: /images/logo.png
+Allow: /images/violinAndCelloStack.JPG
+Allow: /images/violinAndCelloStack3.JPG
+Allow: /images/violinFromBridge.JPG
+
 User-agent: *
 Disallow: /images/
