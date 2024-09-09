@@ -37,5 +37,10 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 <url>
 <loc>https://easeystrings.com/signup.html</loc> 
 <lastmod>2024-08-30</lastmod>  
+</url>
+<!--https://easeystrings.com/developer-contact.html-->
+<url>
+<loc>https://easeystrings.com/developer-contact.html</loc>
+<lastmod>2023-01-01</lastmod>
 </url> 
 </urlset>
