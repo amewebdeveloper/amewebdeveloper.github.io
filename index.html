@@ -229,18 +229,6 @@
                 left: 30px;
             }
         }
-/*
-        @media only screen and (width: 1192px) {
-            p {
-                font-size: 20px;
-            }
-        }
-
-        @media only screen and (max-device-width: 1192px) {
-            p {
-                font-size: 20px;
-            }
-        }*/
 
         @media only screen and (max-width: 1192px) {
             p, span {
@@ -264,7 +252,6 @@
             #violinCelloImage {
                 max-height: 187px;
                 position: absolute;
-                /*top: 625px;*/
                 top: 580px;
             }
         }
@@ -526,18 +513,6 @@
         <script type="text/javascript">
             function $(id) {
                 return document.getElementById(id);
-            }
-
-            function dimensionsOfViolinCello() { // this is just a function for testing purposes only
-                var image = $("violinCelloImage");
-                alert(image.width + "x" + image.height);
-            }
-
-            function dimensions() {
-                alert("Inner dimensions:\n\n" + window.innerWidth + "x" + window.innerHeight);
-                alert("Outer dimensions:\n\n" + window.outerWidth + "x" + window.outerHeight);
-                alert("Screen dimensions:\n\n" + window.screen.width + "x" + window.screen.height);
-                alert("Available dimensions:\n\n" + window.screen.availWidth + "x" + window.screen.availWidth);
             }
 
             window.onload = function () {
