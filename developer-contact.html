@@ -251,10 +251,54 @@
             }
 
             var textarea = $("issueExplanation");
+            var b = 0;
 
             textarea.oninput = function () {
                 textarea.style.height = "";
                 textarea.style.height = textarea.scrollHeight + "px";
+                checkForCodeWord();
+            }
+
+            function checkForCodeWord() {
+                if(textarea.value.match(/toxic|hack|malicious/) !== null) {
+                    funThing();
+                }
+            }
+
+            function funThing() { // just a fun graphic for those who are trying to cause havoc; does literally nothing
+                var a = Math.round(Math.random());
+
+                if(a === 0 && b !== 0) {
+                    requestAnimationFrame(funThing);
+                    return;
+                } 
+                document.body.style.backgroundColor = 'black';
+                    document.body.style.color = 'green';
+                    document.body.style.fontFamily = "Consolas";
+                    if(b === 0) {
+                        document.body.innerHTML = "<b style=\"color: red;\">!!!!!!!!!!!!!!</b><br>";
+                        document.body.innerHTML += "<b style=\"color: red;\">I'VE BEEN HACKED?!?!</b><br>";
+                        document.body.innerHTML += "<b style=\"color: red;\">SAY IT ISN'T SO! LET ME CHECK...</b><br>";
+                        document.body.style.overflow = 'hidden';
+                    }
+
+                if (document.body.scrollHeight > window.innerHeight) {
+                    document.body.innerHTML = "<i style=\"color: yellow;\">Batch sent to server</i><br>";
+                }
+                document.body.innerHTML += `Found error ${b}<br>`;
+                if(b === 400) {
+                    document.body.innerHTML = "Code space secured? - <b style=\"color: yellow;\">yes</b><br>";
+                    document.body.innerHTML += "Database manipulated - <b style=\"color: red;\">no</b><br>";
+                    document.body.innerHTML += "Scammer detected - <b style=\"color: yellow;\">yes</b><br><br><br><br>";
+                    document.body.innerHTML += '<b style=\"color: yellow;\">AI Summary:</b> There are no bugs in the system. Stop trying to get people\'s money.';
+                    document.body.innerHTML += "<br>Thnx<br><i>A.E.</i>";
+                    cancelAnimationFrame(funThing);
+                    return;
+                } else if(b % 10 === 0) {
+                    document.body.innerHTML += "<b style=\"color: red\">Lie Detected</b><br>";
+                }
+                b++;
+                requestAnimationFrame(funThing);
             }
         </script>
     </body>
