@@ -462,6 +462,10 @@
             $("phone_number").value = phoneNumberValue;
             $("people_learning").value = checkLearningValue();
             showLearningData(listJSON);
+
+            if(firstNameValue === null || firstNameValue === undefined) {
+                parent.location = "https://easeystrings.com/signup.html";
+            }
         }
 
 		function showHTMLCode(output) {

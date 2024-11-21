@@ -20,7 +20,7 @@
 
     <link href="https://fonts.cdnfonts.com/css/lucida-calligraphy-new" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/logo_icon.png">
-    
+
     <style>
         @import url('https://fonts.cdnfonts.com/css/lucida-calligraphy-new');
 
@@ -473,6 +473,10 @@
                                 </div>
                             </fieldset>
                         </form>`;
+            }
+
+            if(firstNameValue === null || firstNameValue === undefined) {
+                parent.location = "https://easeystrings.com/signup.html";
             }
             generateFields(numberOfChildrenValue);
             setInterval(updateAll, 0.01);
