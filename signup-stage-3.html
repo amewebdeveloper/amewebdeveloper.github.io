@@ -457,13 +457,13 @@
             $("showField2").innerHTML = "Email: " + emailValue;
             $("showField3").innerHTML = "Phone Number: " + phoneNumberValue;
             $("showField4").innerHTML = checkLearningValue();
-            $("parent_name").value = firstNameValue + " " + lastNameValue;
+            $("parent_name").value = firstNameValue + (middleNameValue === null ? " " : " " + middleNameValue + " ") + lastNameValue; // snuck in a conditional to make sure that information goes through smoothely
             $("email").value = emailValue;
             $("phone_number").value = phoneNumberValue;
             $("people_learning").value = checkLearningValue();
             showLearningData(listJSON);
 
-            if(firstNameValue === null || firstNameValue === undefined) {
+            if(firstNameValue === null || lastNameValue === null || emailValue === null || phoneNumberValue === null || peopleLearningValue === null || numberOfChildrenValue === null) {
                 parent.location = "https://easeystrings.com/signup.html";
             }
         }

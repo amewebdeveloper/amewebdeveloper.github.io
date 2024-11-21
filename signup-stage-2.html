@@ -475,7 +475,7 @@
                         </form>`;
             }
 
-            if(firstNameValue === null || firstNameValue === undefined) {
+            if(firstNameValue === null || lastNameValue === null || emailValue === null || phoneNumberValue === null || peopleLearningValue === null || numberOfChildrenValue === null) {
                 parent.location = "https://easeystrings.com/signup.html";
             }
             generateFields(numberOfChildrenValue);
