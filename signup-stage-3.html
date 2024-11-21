@@ -443,27 +443,27 @@
         var generatedInformation = $("generatedInformation");
 
         window.onload = function () {
-            url = new URLSearchParams(window.location.search);
-            firstNameValue = showHTMLCode(url.get("firstName"));
-            middleNameValue = showHTMLCode(url.get("middleName"));
-            lastNameValue = showHTMLCode(url.get("lastName"));
-            emailValue = showHTMLCode(url.get("email"));
-            phoneNumberValue = showHTMLCode(url.get("phoneNumber"));
-            peopleLearningValue = showHTMLCode(url.get("peopleLearning"));
-            listJSON = url.get("instrumentsBeingLearned");
-            listJSON = JSON.parse(listJSON);
-			label = listJSON.length === 1 && listJSON[0].studentName === firstNameValue ? "Name: " : "Parent Name: ";
-            $("showField1").innerHTML = label + firstNameValue + " " + lastNameValue;
-            $("showField2").innerHTML = "Email: " + emailValue;
-            $("showField3").innerHTML = "Phone Number: " + phoneNumberValue;
-            $("showField4").innerHTML = checkLearningValue();
-            $("parent_name").value = firstNameValue + (middleNameValue === null ? " " : " " + middleNameValue + " ") + lastNameValue; // snuck in a conditional to make sure that information goes through smoothely
-            $("email").value = emailValue;
-            $("phone_number").value = phoneNumberValue;
-            $("people_learning").value = checkLearningValue();
-            showLearningData(listJSON);
-
-            if(firstNameValue === null || lastNameValue === null || emailValue === null || phoneNumberValue === null || peopleLearningValue === null || numberOfChildrenValue === null) {
+            try {
+                url = new URLSearchParams(window.location.search);
+                firstNameValue = showHTMLCode(url.get("firstName"));
+                middleNameValue = showHTMLCode(url.get("middleName"));
+                lastNameValue = showHTMLCode(url.get("lastName"));
+                emailValue = showHTMLCode(url.get("email"));
+                phoneNumberValue = showHTMLCode(url.get("phoneNumber"));
+                peopleLearningValue = showHTMLCode(url.get("peopleLearning"));
+                listJSON = url.get("instrumentsBeingLearned");
+                listJSON = JSON.parse(listJSON);
+                label = listJSON.length === 1 && listJSON[0].studentName === firstNameValue ? "Name: " : "Parent Name: ";
+                $("showField1").innerHTML = label + firstNameValue + " " + lastNameValue;
+                $("showField2").innerHTML = "Email: " + emailValue;
+                $("showField3").innerHTML = "Phone Number: " + phoneNumberValue;
+                $("showField4").innerHTML = checkLearningValue();
+                $("parent_name").value = firstNameValue + (middleNameValue === "" ? " " : " " + middleNameValue + " ") + lastNameValue; // snuck in a conditional to make sure that information goes through smoothely
+                $("email").value = emailValue;
+                $("phone_number").value = phoneNumberValue;
+                $("people_learning").value = checkLearningValue();
+                showLearningData(listJSON);
+            } catch (e) { // missing information; let's start at the beginning
                 parent.location = "https://easeystrings.com/signup.html";
             }
         }
