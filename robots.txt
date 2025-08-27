@@ -5,7 +5,7 @@ Allow: /about-us.html
 Allow: /contact-us.html
 Allow: /lessons.html
 Allow: /instrument.html
-Allow: /meet-the-teachers.html
+Allow: /meet-the-teacher.html
 Allow: /signup.html
 Allow: /images/logo.png
 Allow: /images/violinAndCelloStack.JPG

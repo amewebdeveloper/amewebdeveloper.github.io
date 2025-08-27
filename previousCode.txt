@@ -159,7 +159,7 @@
                             <a href="contact-us.html" style="font-size: 2.0em;">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="instrument.html" style="font-size: 2.0em;">Instruments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="pricing.html" style="font-size: 2.0em;">Pricing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="meet-the-teachers.html" style="font-size: 2.0em;">Meet the Teachers!</a>
+                            <a href="meet-the-teacher.html" style="font-size: 2.0em;">Meet the Teacher!</a>
                         </div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
             <!--<nav align="center">
                 <a href="instrument.html" style="font-size: 2.0em;">Instruments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="pricing.html" style="font-size: 2.0em;">Pricing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="meet-the-teachers.html" style="font-size: 2.0em;">Meet the Teachers!</a>
+                <a href="meet-the-teacher.html" style="font-size: 2.0em;">Meet the Teacher!</a>
             </nav>-->
         </header>
 
