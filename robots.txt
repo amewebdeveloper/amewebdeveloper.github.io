@@ -1,5 +1,6 @@
 User-agent: facebookexternalhit
 Disallow: /images/
+Disallow: /404.html
 Allow: /index.html
 Allow: /about-us.html
 Allow: /contact-us.html
