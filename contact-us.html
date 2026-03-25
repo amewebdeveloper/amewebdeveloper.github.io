@@ -218,15 +218,14 @@
                     <div id="centeredForm">
                         <form name="contactform" id="contactform"
                               class="contactform"
-                              action="https://formsubmit.io/send/6bab1529-9c5a-41da-94f1-135e949f1b90"
+                              action="https://formsubmit.co/easeystrings@gmail.com"
                               method="POST">
-                            <input name="_redirect" type="hidden" id="messageSent" value="https://easeystrings.com/message-sent.html" />
+                            <input name="_next" type="hidden" id="messageSent" value="https://easeystrings.com/message-sent.html" />
                             <input type="text" name="email" id="email" placeholder="Enter Email Address Here" required /><br />
                             <input type="text" name="phone" id="phone" placeholder="Enter Mobile Number Here"/><br />
                             <input type="text" name="subject" id="subject" placeholder="Enter Subject Here" required /><br />
                             <textarea name="question" id="question" placeholder="Enter Question Here" required></textarea><br />
-                            <input type="number" name="answer" id="answer" placeholder="What is 20 x 24?" style="display: none;"/><br />
-                            <input name="_formsubmit_id" type="text" style="display:none">
+							<input type="hidden" name="_captcha" value="false">
                             <input type="submit" id="submit" value="Send" />
                         </form>
                     </div>
