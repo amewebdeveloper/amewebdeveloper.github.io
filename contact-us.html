@@ -66,18 +66,18 @@
             visibility: hidden; 
         }
 
-        input {
+        input, textarea{
             font-family: Calibri, sans-serif;
             font-size: 12pt;
-            width: 190px;
+            width: 300px;
             height: 30px;
         }
 
-        textarea {
+       /* textarea {
             font-family: Calibri, sans-serif;
             font-size: 12pt;
             width: 190px;
-        }
+        }*/
 
         ::-webkit-scrollbar {
             display: none;
@@ -221,10 +221,10 @@
                               action="https://formsubmit.co/3bf8eb0971ce3bd278f8d847d85f31b5 "
                               method="POST">
                             <input name="_next" type="hidden" id="messageSent" value="https://easeystrings.com/message-sent.html" />
-                            <input type="text" name="email" id="email" placeholder="Enter Email Address Here" required /><br />
-                            <input type="text" name="phone" id="phone" placeholder="Enter Mobile Number Here"/><br />
-                            <input type="text" name="subject" id="subject" placeholder="Enter Subject Here" required /><br />
-                            <textarea name="question" id="question" placeholder="Enter Question Here" required></textarea><br />
+                            <input type="text" name="email" id="email" placeholder="Enter Email Address Here" required /><br /><br>
+                            <input type="text" name="phone" id="phone" placeholder="Enter Mobile Number Here"/><br /><br>
+                            <input type="text" name="subject" id="subject" placeholder="Enter Subject Here" required /><br /><br>
+                            <textarea name="question" id="question" placeholder="Enter Question Here" required></textarea><br /><br>
 							<input type="hidden" name="_captcha" value="false">
                             <input type="submit" id="submit" value="Send" />
                         </form>
