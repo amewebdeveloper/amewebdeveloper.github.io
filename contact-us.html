@@ -156,12 +156,30 @@
                 width: 300px;
             }
         }
+		
+		@media only screen and (max-width: 399px) {
+			input, textarea {
+				width: 250px;
+			}
+		}
+		
+		@media only screen and (max-width: 357px) {
+			input, textarea {
+				width: 200px;
+			}
+		}
 
         @media only screen and (max-width: 318px) {
             #logo {
                 width: 200px;
             }
         }
+		
+		@media only screen and (max-width: 299px) { /*not necessary, but just in case we are dealing with super small devices*/
+			input, textarea {
+				width: 150px;
+			}
+		}
     </style>
 </head>
     <body>
